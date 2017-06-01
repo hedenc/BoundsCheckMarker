@@ -10,5 +10,8 @@ Example:
 
 clang -g -fmemsafety -S -emit-llvm -o OUTPUT_FILE INPUT_FILE
 
-make all should produce example output in Examples/output.txt of the marker run 
+Make all should produce example output in Examples/output.txt of the marker run 
 on Examples/safe_test.s which is generated from Examples/test.c with Softbound.
+
+Functions to mark can be added and removed in functions.def and then rebuilding
+the program.
