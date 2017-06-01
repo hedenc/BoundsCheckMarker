@@ -25,6 +25,8 @@ num.def: num.py
 clean:
 	rm -f *.o main alpha.def num.def
 
+examples: Examples/safe_test.s Examples/unsafe_test.s
+
 Examples/safe_test.s: Examples/test.c
 	$(SOFTBOUND_CC) -g -fmemsafety -S -emit-llvm -o Examples/safe_test.s Examples/test.c
 
