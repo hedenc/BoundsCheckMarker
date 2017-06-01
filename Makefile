@@ -1,5 +1,7 @@
 
 CXXFLAGS = -std=c++14 -O3 -Wall -pedantic
+
+# Change to path to the softbound installed clang
 SOFTBOUND_CC = ../scinstall/bin/clang
 
 all: marker examples
@@ -24,6 +26,9 @@ num.def: num.py
 
 clean:
 	rm -f *.o main Examples/output.txt
+
+hard_clean: clean
+	rm -f alpha.def num.def Examples/safe_test.s Examples/unsafe_test.s
 
 examples: Examples/safe_test.s Examples/unsafe_test.s Examples/output.txt
 
