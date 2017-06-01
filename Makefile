@@ -1,9 +1,10 @@
 
 CXXFLAGS = -std=c++14 -O3 -Wall -pedantic
+SOFTBOUND_CC = ../scinstall/bin/clang
 
-all: main
+all: marker
 
-main: main.o lexer.o parser.o
+marker: main.o lexer.o parser.o
 	$(CXX) $(CXXFLAGS) -o main main.o lexer.o parser.o
 
 main.o: main.cpp parser.hpp
@@ -23,3 +24,10 @@ num.def: num.py
 
 clean:
 	rm -f *.o main alpha.def num.def
+
+Examples/safe_test.s: Examples/test.c
+	$(SOFTBOUND_CC) -g -fmemsafety -S -emit-llvm -o Examples/safe_test.s Examples/test.c
+
+Examples/unsafe_test.s: Examples/test.c
+	$(SOFTBOUND_CC) -g -S -emit-llvm -o Examples/unsafe_test.s Examples/test.c
+
