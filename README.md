@@ -15,3 +15,5 @@ on Examples/safe_test.s which is generated from Examples/test.c with Softbound.
 
 Functions to mark can be added and removed in functions.def and then rebuilding
 the program.
+
+Set the path for the Softbound modified clang in the Makefile.
