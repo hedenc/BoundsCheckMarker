@@ -10,4 +10,4 @@ follow the user guide at http://sva.cs.illinois.edu/docs/UsersGuide.html.
 
 Example:
 
-clang -g -fmemsafety -S -emit-llvm -o <output file> <input file>
+clang -g -fmemsafety -S -emit-llvm -o OUTPUT_FILE INPUT_FILE
