@@ -4,6 +4,9 @@ Free to use and modify non commercially as long as this notice remains
 */
 
 #include "lexer.hpp"
+#include <stdexcept>
+
+#define STR(X) #X
 
 namespace rtboundsmark {
 
@@ -24,7 +27,9 @@ lexer::lexer(const char *fname): head_set_(false), val_()
 {
     input_ = fopen(fname, "r");
     if (!input_)
-        fprintf(stderr, "Error opening file at %s:%d\n", __FILE__, __LINE__);
+        throw std::runtime_error(
+            "Error opening file at "  __FILE__ ":" STR(__LINE__)
+        );
 }
 
 // Moves first non eaten character to 'head_'
@@ -148,9 +153,6 @@ void lexer::print()
         case intlit:
             printf("intlit[%llu]\n", intval());
             break;
-        case dbg:
-            printf("dbg\n");
-            break;
         case func:
             printf("func[%s]\n", strval());
             break;
@@ -174,6 +176,7 @@ X(i32)
 X(null)
 X(lparen)
 X(rparen)
+X(dbg)
 #undef X
         }
     } while (ctok != eof);

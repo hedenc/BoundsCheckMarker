@@ -29,24 +29,26 @@ public:
 
 private:
     union {
-        char *fname_;
+        const char *fname_;
         uint64_t dbg_no_;
     };
 public:
-    // Constructs a call node
-    node(const char *fname): 
-        kind_(call_node), fname_(new char [strlen(fname) +1])
-    {
-        std::strcpy(fname_, fname);
-    }
+    /*
+    Constructs a call node
+    Observe that the node class doesn't take ownership of 'fname_'.
+    'fname' has to be alive at use, and if dynamically allocated, dynamically
+    freed.
+    */
+    node(const char *fname):
+        kind_(call_node), fname_(fname)
+    {}
+
     // Constructs a debug point
     node(uint64_t dbgno): kind_(dbg_node), dbg_no_(dbgno)
     {}
 
     ~node()
     {
-        if (kind_ == call_node && fname_)
-            delete [] fname_;
     }
 
     // I want to avoid implicit deep copies
@@ -58,6 +60,11 @@ public:
 
     // Prints node to stdout
     void print() const;
+
+    const char *fname() const
+    {
+        return fname_;
+    }
 
     // Getter for debug node, works for debug nodes
     uint64_t dbg_no() const

@@ -8,6 +8,8 @@ Free to use and modify non commercially as long as this notice remains
 #include <cstdio>
 #include <stdexcept>
 
+#define STR(X) #X
+
 namespace rtboundsmark {
 
 node::node(const node &other): 
@@ -15,8 +17,7 @@ node::node(const node &other):
 {
     switch (kind_) {
     case call_node:
-        fname_ = new char [strlen(other.fname_) +1];
-        std::strcpy(fname_, other.fname_);
+        fname_ = other.fname_;
         break;
     case dbg_node:
         dbg_no_ = other.dbg_no_;
@@ -121,10 +122,14 @@ bool parser::parse_call(ast &tree)
     if (!eat_until({at}) || !expects({func}))
         return false;
 
-    tree.code_.emplace_back(lex_.strval());
+    char *strnode = new char [strlen(lex_.strval()) +1];
+    strcpy(strnode, lex_.strval());
+    tree.code_.emplace_back(strnode);
 
     if (!expects({lparen}) || !eat_until({rparen}))
-        throw std::runtime_error("Expected () after function");
+        throw std::runtime_error(
+            "Expected () after function " __FILE__ ":" STR(__LINE__)
+        );
 
     labuff_ = {};
     return true;

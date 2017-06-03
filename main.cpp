@@ -32,6 +32,7 @@ int main(int argc, const char **argv)
             while (a->kind_ == call_node) {
                 printf(",\n");
                 a->print();
+                delete [] a->fname(); // strings aren't owned by call_node
                 ++a;
             };
 
