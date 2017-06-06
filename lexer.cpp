@@ -12,11 +12,8 @@ namespace rtboundsmark {
 
 // Hashmap of tokens per keyword
 const std::unordered_map<std::string, token> lexer::keywords_ = {
-    {"dbg", dbg},
-    {"metadata", meta},
     {"call", call},
-    {"i32", i32},
-    {"null", null}
+    {"i32", i32}
 // Map functions to track to token 'func'
 #define X(name) ,{ #name , func }
 #include "functions.def"
@@ -81,11 +78,7 @@ Generates blocks for listed tokens with following code:
             return tok;
 */
 #define X(sym, tok) case sym: eat(); return tok;
-X('!', bang)
-X('}', rbrace)
 X(',', comma)
-X('{', lbrace)
-X('=', eqsign)
 X('@', at)
 X('(', lparen)
 X(')', rparen)
@@ -164,19 +157,12 @@ Generates blocks for each token with following code
 #define X(sym) case sym: printf(#sym "\n"); break;
 X(eof)
 X(other)
-X(bang)
-X(rbrace)
 X(comma)
-X(meta)
-X(lbrace)
-X(eqsign)
 X(at)
 X(call)
 X(i32)
-X(null)
 X(lparen)
 X(rparen)
-X(dbg)
 #undef X
         }
     } while (ctok != eof);

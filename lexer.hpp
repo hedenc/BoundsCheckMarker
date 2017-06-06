@@ -15,8 +15,8 @@ namespace rtboundsmark {
 Tokens, other matches irrelevant token that isn't whitespace
 */
 enum token {
-    other, eof, bang, intlit, dbg, rbrace, comma, meta, lbrace, eqsign, at, call, 
-    func, i32, null, lparen, rparen
+    other, eof, intlit, comma, at, call, 
+    func, i32, lparen, rparen
 };
 /*
 Lexer class, gives next token with next_tok() last token is eof.
