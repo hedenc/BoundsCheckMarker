@@ -8,8 +8,6 @@ Free to use and modify non commercially as long as this notice remains
 
 #include "lexer.hpp"
 
-#include <queue>
-
 #include <initializer_list>
 
 namespace rtboundsmark {
