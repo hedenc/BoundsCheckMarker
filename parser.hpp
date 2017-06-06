@@ -39,7 +39,7 @@ public:
         lex_(fname), ctok_(eof) 
     {};
 
-    // Parses file and fills up the AST in 'tree'
+    // Parses file and output marking info to stdout
     void parse();
 
 };
