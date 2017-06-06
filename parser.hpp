@@ -16,12 +16,12 @@ namespace rtboundsmark {
 
 /*
 Parser
-Construct empty AST and pass to parse() to parse
+parse() to parse
 */
 class parser {
     lexer lex_;
 
-    token ctok_; // Look ahead buffer
+    token ctok_; // Current token
 
     bool parse_call();
 
