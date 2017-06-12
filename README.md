@@ -14,3 +14,9 @@ Make all should produce example output in Examples/output.txt of the marker run
 on Examples/safe_test.s which is generated from Examples/test.c with Softbound.
 
 Set the path for the Softbound modified clang in the Makefile.
+
+Added a bounds check marker for binary files working currently on MacOSX
+
+It's invoked by passing the binary file.
+Code is in the binmarker directory and examples in binmarker/Examples
+
