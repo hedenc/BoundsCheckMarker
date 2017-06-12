@@ -45,7 +45,4 @@ public:
 
 } /* namespace */
 
-
-
-
 #endif
