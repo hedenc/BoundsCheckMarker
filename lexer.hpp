@@ -46,6 +46,12 @@ public:
     // Constructs lexer for file named 'fname'
     lexer(const char *fname);
 
+    ~lexer()
+    {
+        if (input_)
+            fclose(input_);
+    }
+
     // Returns token data for tokens that use string token data
     const char *strval() const
     {

@@ -40,3 +40,9 @@ Examples/unsafe_test.s: Examples/test.c
 
 Examples/output.txt: marker Examples/safe_test.s
 	./marker Examples/safe_test.s > Examples/output.txt
+
+Examples/safe_test.o: Examples/test.c
+	$(SOFTBOUND_CC) -g -fmemsafety -c -o Examples/unsafe_test.o Examples/test.c
+
+Examples/safe_test: Examples/safe_test.o
+	$(SOFTBOUND_CC)  -fmemsafety -o Examples/safe_test Examples/safe_test.o -L../scinstall/lib

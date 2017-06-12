@@ -30,7 +30,6 @@ class parser {
 
     bool eat_until(std::initializer_list<token> until);
 
-
 public:
     /*
     Constructs parser for file with name 'fname'
@@ -45,5 +44,8 @@ public:
 };
 
 } /* namespace */
+
+
+
 
 #endif

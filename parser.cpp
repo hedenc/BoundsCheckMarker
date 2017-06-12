@@ -21,7 +21,7 @@ void parser::parse()
 // Parses when matching [call]
 bool parser::parse_call()
 {
-    if (!eat_until({at}) || !expects({func}))
+    if (!eat_until({at}) || !expects({func}) )
         return false;
 
     char *strnode = new char [strlen(lex_.strval()) +1];
@@ -97,6 +97,7 @@ bool parser::eat_until(std::initializer_list<token> until)
     } while (true);
     return false;
 }
+
 
 } /* namespace */
 
