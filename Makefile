@@ -1,4 +1,7 @@
 
+SOFTBOUND_CC = clang
+SOFTBOUND_FLAGS = -fsoftboundcets -lm -lrt -g
+SOFTBOUND_LIB = 'home/hedenc/softboundcets-34-master/softboundcets-lib'
 
 CXXFLAGS = -std=c++14 -O3 -Wall -pedantic
 
@@ -24,6 +27,9 @@ afAF.def: afAF.py
 
 parser.o: parser.cpp lexer.hpp functions.def
 	$(CXX) -c $(CXXFLAGS) -o parser.o parser.cpp
+
+Tests/test: Tests/test.c
+	$(SOFTBOUND_CC) $(SOFTBOUND_FLAGS) -L/$(SOFTBOUND_LIB) -o ./Tests/test ./Tests/test.c
 
 clean:
 	rm -f *.o marker
