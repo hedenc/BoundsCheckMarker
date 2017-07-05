@@ -1,33 +1,30 @@
+#ifndef LEXER_HPP
+#define LEXER_HPP
+#include <string>
+#include <unordered_map>
+
 /*
 Author: hedenc@kth.se
 Free to use and modify non commercially as long as this notice remains
 */
 
-#ifndef LEXER_HPP
-#define LEXER_HPP
+namespace binmark {
 
-#include <unordered_map>
-#include <string>
-
-namespace rtboundsmark {
-
-/*
-Tokens, other matches irrelevant token that isn't whitespace
-*/
 enum token {
-    other, eof, intlit, comma, at, call, 
-    func, i32, lparen, rparen
+    other, eof, lineinfo, addr, id, langle, rangle, num
+#define X(str, sym) ,sym
+#include "keywords.def"
+#undef X
 };
-/*
-Lexer class, gives next token with next_tok() last token is eof.
-To fetch token data use intval() or strval() observe the string returned from
-strval() has to be copied or from Lexer.
-*/
+
 class lexer {
-    FILE *input_;           // Input file
+    FILE *input_;
     bool head_set_;         // true if 'head_' is set with non handled character
-    int head_;              // Reading head
-    std::string val_;       // Stores token data
+    int head_;
+
+    std::string val_;
+
+    const static std::unordered_map<std::string, token> keywords_;
 
     void read();
     
@@ -36,21 +33,22 @@ class lexer {
         head_set_ = false;
     }
 
-    token state1();  
 
-    token state2();
 
-    const static std::unordered_map<std::string, token> keywords_;
+    token state_slash();
+    token state_alpha();
+   
+    token state_langle();
+    token state_langle_alpha();
+
+    token state_num();
+    token state_zero();
+    token state_minus();
 
 public:
-    // Constructs lexer for file named 'fname'
-    lexer(const char *fname);
-
-    ~lexer()
-    {
-        if (input_)
-            fclose(input_);
-    }
+    lexer(FILE *file): // Constructs lexer for opened file 'file'
+        input_(file), head_set_(false), val_() //, start_addr(0)
+    {}
 
     // Returns token data for tokens that use string token data
     const char *strval() const
@@ -59,9 +57,18 @@ public:
     }
 
     // Returns token data for tokens that use integer token data
-    uint64_t intval() const
-    { 
-        return std::stoull(val_);
+    int64_t intval() const
+    {
+        size_t pos;
+        return std::stoull(val_, &pos, 0);
+    }
+
+    // Returns token data for tokens that use hexformated integer token data
+    uint64_t hexval() const
+    {
+        //fprintf(stderr, "%s\n", strval());
+        size_t pos;
+        return std::stoull(val_, &pos, 16);
     }
 
     // Advances the lexer and returns next token
@@ -73,4 +80,4 @@ public:
 
 } /* namespace */
 
-#endif
+#endif //LEXER_HPP

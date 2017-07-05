@@ -1,0 +1,1585 @@
+
+./Examples/test:	file format ELF64-x86-64
+
+Disassembly of section .text:
+_start:
+  400990:	xorl	%ebp, %ebp
+  400992:	movq	%rdx, %r9
+  400995:	popq	%rsi
+  400996:	movq	%rsp, %rdx
+  400999:	andq	$-16, %rsp
+  40099d:	pushq	%rax
+  40099e:	pushq	%rsp
+  40099f:	movq	$4203216, %r8
+  4009a6:	movq	$4203072, %rcx
+  4009ad:	movq	$4199408, %rdi
+  4009b4:	callq	-313
+  4009b9:	hlt
+  4009ba:	nop
+  4009bb:	nop
+
+call_gmon_start:
+  4009bc:	subq	$8, %rsp
+  4009c0:	movq	17945(%rip), %rax
+  4009c7:	testq	%rax, %rax
+  4009ca:	je	2 <call_gmon_start+0x12>
+  4009cc:	callq	*%rax
+  4009ce:	addq	$8, %rsp
+  4009d2:	retq
+  4009d3:	nopw	%cs:(%rax,%rax)
+
+deregister_tm_clones:
+  4009e0:	movl	$4214951, %eax
+  4009e5:	pushq	%rbp
+  4009e6:	subq	$4214944, %rax
+  4009ec:	cmpq	$14, %rax
+  4009f0:	movq	%rsp, %rbp
+  4009f3:	ja	2 <deregister_tm_clones+0x17>
+  4009f5:	popq	%rbp
+  4009f6:	retq
+  4009f7:	movl	$0, %eax
+  4009fc:	testq	%rax, %rax
+  4009ff:	je	-12 <deregister_tm_clones+0x15>
+  400a01:	popq	%rbp
+  400a02:	movl	$4214944, %edi
+  400a07:	jmpq	*%rax
+  400a09:	nopl	(%rax)
+
+register_tm_clones:
+  400a10:	movl	$4214944, %eax
+  400a15:	pushq	%rbp
+  400a16:	subq	$4214944, %rax
+  400a1c:	sarq	$3, %rax
+  400a20:	movq	%rsp, %rbp
+  400a23:	movq	%rax, %rdx
+  400a26:	shrq	$63, %rdx
+  400a2a:	addq	%rdx, %rax
+  400a2d:	sarq	%rax
+  400a30:	jne	2 <register_tm_clones+0x24>
+  400a32:	popq	%rbp
+  400a33:	retq
+  400a34:	movl	$0, %edx
+  400a39:	testq	%rdx, %rdx
+  400a3c:	je	-12 <register_tm_clones+0x22>
+  400a3e:	popq	%rbp
+  400a3f:	movq	%rax, %rsi
+  400a42:	movl	$4214944, %edi
+  400a47:	jmpq	*%rdx
+  400a49:	nopl	(%rax)
+
+__do_global_dtors_aux:
+  400a50:	cmpb	$0, 17993(%rip)
+  400a57:	jne	17 <__do_global_dtors_aux+0x1A>
+  400a59:	pushq	%rbp
+  400a5a:	movq	%rsp, %rbp
+  400a5d:	callq	-130 <deregister_tm_clones>
+  400a62:	popq	%rbp
+  400a63:	movb	$1, 17974(%rip)
+  400a6a:	rep
+  400a6b:	retq
+  400a6c:	nopl	(%rax)
+
+frame_dummy:
+  400a70:	cmpq	$0, 17232(%rip)
+  400a78:	je	30 <frame_dummy+0x28>
+  400a7a:	movl	$0, %eax
+  400a7f:	testq	%rax, %rax
+  400a82:	je	20 <frame_dummy+0x28>
+  400a84:	pushq	%rbp
+  400a85:	movl	$4214216, %edi
+  400a8a:	movq	%rsp, %rbp
+  400a8d:	callq	*%rax
+  400a8f:	popq	%rbp
+  400a90:	jmp	-133 <register_tm_clones>
+  400a95:	nopl	(%rax)
+  400a98:	jmp	-141 <register_tm_clones>
+  400a9d:	nopl	(%rax)
+
+softboundcets_pseudo_main:
+; /home/hedenc/softboundcets-34-master/tests/test1.c:9
+  400aa0:	pushq	%rbp
+  400aa1:	movq	%rsp, %rbp
+  400aa4:	pushq	%r15
+  400aa6:	pushq	%r14
+  400aa8:	pushq	%rbx
+  400aa9:	subq	$376, %rsp
+  400ab0:	leaq	-128(%rbp), %rdi
+  400ab4:	leaq	-136(%rbp), %rsi
+  400abb:	callq	5216 <__softboundcets_stack_memory_allocation>
+  400ac0:	movq	-128(%rbp), %rsi
+  400ac4:	movq	-136(%rbp), %rdi
+  400acb:	movq	%rsi, -168(%rbp)
+  400ad2:	movq	%rdi, -176(%rbp)
+  400ad9:	callq	5570 <__softboundcets_get_global_lock>
+  400ade:	movabsq	$0, %rsi
+  400ae8:	addq	$4, %rsi
+  400aef:	leaq	-140(%rbp), %rdi
+  400af6:	leaq	-160(%rbp), %rcx
+  400afd:	leaq	-152(%rbp), %rdx
+  400b04:	leaq	-144(%rbp), %r8
+  400b0b:	movq	%rdi, %r9
+  400b0e:	movq	%rdi, %r10
+  400b11:	addq	$4, %r10
+  400b18:	movq	%r8, %r11
+  400b1b:	addq	$4, %r8
+  400b22:	movq	%rdx, %rbx
+  400b25:	addq	$8, %rdx
+  400b2c:	movq	%rcx, %r14
+  400b2f:	addq	$8, %rcx
+  400b36:	movq	%rdi, -184(%rbp)
+  400b3d:	movq	%r9, %rdi
+  400b40:	movq	%rsi, -192(%rbp)
+  400b47:	movq	%r10, %rsi
+  400b4a:	movq	-184(%rbp), %r9
+  400b51:	movq	%rdx, -200(%rbp)
+  400b58:	movq	%r9, %rdx
+  400b5b:	movq	-192(%rbp), %r10
+  400b62:	movq	%rcx, -208(%rbp)
+  400b69:	movq	%r10, %rcx
+  400b6c:	movq	%rax, -216(%rbp)
+  400b73:	movq	%r8, -224(%rbp)
+  400b7a:	movq	%r14, -232(%rbp)
+  400b81:	movq	%rbx, -240(%rbp)
+  400b88:	movq	%r11, -248(%rbp)
+  400b8f:	callq	4188 <__softboundcets_spatial_store_dereference_check>
+  400b94:	movabsq	$0, %rax
+  400b9e:	addq	$4, %rax
+  400ba4:	leaq	-144(%rbp), %rcx
+  400bab:	movl	$0, -140(%rbp)
+  400bb5:	movq	-248(%rbp), %rdi
+  400bbc:	movq	-224(%rbp), %rsi
+  400bc3:	movq	%rcx, %rdx
+  400bc6:	movq	%rax, %rcx
+  400bc9:	callq	4130 <__softboundcets_spatial_store_dereference_check>
+  400bce:	movabsq	$0, %rax
+  400bd8:	addq	$8, %rax
+  400bde:	leaq	-152(%rbp), %rcx
+; /home/hedenc/softboundcets-34-master/tests/test1.c:10
+  400be5:	movl	$0, -144(%rbp)
+  400bef:	movq	-240(%rbp), %rdi
+  400bf6:	movq	-200(%rbp), %rsi
+  400bfd:	movq	%rcx, %rdx
+  400c00:	movq	%rax, %rcx
+  400c03:	callq	4072 <__softboundcets_spatial_store_dereference_check>
+  400c08:	leaq	-152(%rbp), %rax
+  400c0f:	leaq	-144(%rbp), %rcx
+; /home/hedenc/softboundcets-34-master/tests/test1.c:11
+  400c16:	movq	%rcx, -152(%rbp)
+  400c1d:	movq	%rax, %rdi
+  400c20:	movq	-248(%rbp), %rsi
+  400c27:	movq	-224(%rbp), %rdx
+  400c2e:	movq	-176(%rbp), %rcx
+  400c35:	movq	-168(%rbp), %r8
+  400c3c:	callq	4223 <__softboundcets_metadata_store>
+  400c41:	movabsq	$0, %rax
+  400c4b:	addq	$8, %rax
+  400c51:	leaq	-160(%rbp), %rcx
+  400c58:	movq	-232(%rbp), %rdi
+  400c5f:	movq	-208(%rbp), %rsi
+  400c66:	movq	%rcx, %rdx
+  400c69:	movq	%rax, %rcx
+  400c6c:	callq	3967 <__softboundcets_spatial_store_dereference_check>
+  400c71:	leaq	-160(%rbp), %rax
+  400c78:	leaq	-144(%rbp), %rcx
+; /home/hedenc/softboundcets-34-master/tests/test1.c:12
+  400c7f:	movq	%rcx, -160(%rbp)
+  400c86:	movq	%rax, %rdi
+  400c89:	movq	-248(%rbp), %rsi
+  400c90:	movq	-224(%rbp), %rdx
+  400c97:	movq	-176(%rbp), %rcx
+  400c9e:	movq	-168(%rbp), %r8
+  400ca5:	callq	4118 <__softboundcets_metadata_store>
+  400caa:	leaq	-96(%rbp), %rsi
+  400cae:	leaq	-104(%rbp), %rdx
+  400cb2:	leaq	-112(%rbp), %rcx
+  400cb6:	leaq	-120(%rbp), %r8
+  400cba:	leaq	-152(%rbp), %rax
+; /home/hedenc/softboundcets-34-master/tests/test1.c:13
+  400cc1:	movq	-152(%rbp), %rdi
+  400cc8:	movq	%rdi, -256(%rbp)
+  400ccf:	movq	%rax, %rdi
+  400cd2:	callq	4361 <__softboundcets_metadata_load>
+  400cd7:	movabsq	$0, %rax
+  400ce1:	addq	$4, %rax
+  400ce7:	movq	-96(%rbp), %rcx
+  400ceb:	movq	-104(%rbp), %rdx
+  400cef:	movq	-112(%rbp), %rsi
+  400cf3:	movq	-120(%rbp), %rdi
+  400cf7:	movq	-256(%rbp), %r8
+  400cfe:	movq	%rdi, -264(%rbp)
+  400d05:	movq	%rcx, %rdi
+  400d08:	movq	%rsi, -272(%rbp)
+  400d0f:	movq	%rdx, %rsi
+  400d12:	movq	%rdx, -280(%rbp)
+  400d19:	movq	%r8, %rdx
+  400d1c:	movq	%rcx, -288(%rbp)
+  400d23:	movq	%rax, %rcx
+  400d26:	callq	3733 <__softboundcets_spatial_load_dereference_check>
+  400d2b:	movq	-264(%rbp), %rdi
+  400d32:	movq	-272(%rbp), %rsi
+  400d39:	movq	-288(%rbp), %rdx
+  400d40:	movq	-280(%rbp), %rcx
+  400d47:	callq	4340 <__softboundcets_temporal_load_dereference_check>
+  400d4c:	leaq	-64(%rbp), %rsi
+  400d50:	leaq	-72(%rbp), %rdx
+  400d54:	leaq	-80(%rbp), %rcx
+  400d58:	leaq	-88(%rbp), %r8
+  400d5c:	leaq	-160(%rbp), %rax
+  400d63:	movq	-256(%rbp), %rdi
+  400d6a:	movl	(%rdi), %r15d
+  400d6d:	movq	-160(%rbp), %r9
+  400d74:	movq	%rax, %rdi
+  400d77:	movl	%r15d, -292(%rbp)
+  400d7e:	movq	%r9, -304(%rbp)
+  400d85:	callq	4182 <__softboundcets_metadata_load>
+  400d8a:	movabsq	$0, %rax
+  400d94:	addq	$4, %rax
+  400d9a:	movq	-64(%rbp), %rcx
+  400d9e:	movq	-72(%rbp), %rdx
+  400da2:	movq	-80(%rbp), %rsi
+  400da6:	movq	-88(%rbp), %rdi
+  400daa:	movq	-304(%rbp), %r8
+  400db1:	movq	%rdi, -312(%rbp)
+  400db8:	movq	%rcx, %rdi
+  400dbb:	movq	%rsi, -320(%rbp)
+  400dc2:	movq	%rdx, %rsi
+  400dc5:	movq	%rdx, -328(%rbp)
+  400dcc:	movq	%r8, %rdx
+  400dcf:	movq	%rcx, -336(%rbp)
+  400dd6:	movq	%rax, %rcx
+  400dd9:	callq	3554 <__softboundcets_spatial_load_dereference_check>
+  400dde:	movq	-312(%rbp), %rdi
+  400de5:	movq	-320(%rbp), %rsi
+  400dec:	movq	-336(%rbp), %rdx
+  400df3:	movq	-328(%rbp), %rcx
+  400dfa:	callq	4161 <__softboundcets_temporal_load_dereference_check>
+  400dff:	leaq	-32(%rbp), %rsi
+  400e03:	leaq	-40(%rbp), %rdx
+  400e07:	leaq	-48(%rbp), %rcx
+  400e0b:	leaq	-56(%rbp), %r8
+  400e0f:	leaq	-152(%rbp), %rax
+  400e16:	movl	-292(%rbp), %r15d
+  400e1d:	movq	-304(%rbp), %rdi
+  400e24:	addl	(%rdi), %r15d
+  400e27:	movq	-152(%rbp), %rdi
+  400e2e:	movq	%rdi, -344(%rbp)
+  400e35:	movq	%rax, %rdi
+  400e38:	movl	%r15d, -348(%rbp)
+  400e3f:	callq	3996 <__softboundcets_metadata_load>
+  400e44:	movl	$2, %edi
+  400e49:	movq	-32(%rbp), %rax
+  400e4d:	movq	-40(%rbp), %rcx
+  400e51:	movq	-48(%rbp), %rdx
+  400e55:	movq	-56(%rbp), %rsi
+  400e59:	movq	%rsi, -360(%rbp)
+  400e60:	movq	%rax, -368(%rbp)
+  400e67:	movq	%rcx, -376(%rbp)
+  400e6e:	movq	%rdx, -384(%rbp)
+  400e75:	callq	2118 <__softboundcets_allocate_shadow_stack_space>
+  400e7a:	movl	$1, %esi
+  400e7f:	movq	-368(%rbp), %rdi
+  400e86:	callq	2405 <__softboundcets_store_base_shadow_stack>
+  400e8b:	movl	$1, %esi
+  400e90:	movq	-376(%rbp), %rdi
+  400e97:	callq	2452 <__softboundcets_store_bound_shadow_stack>
+  400e9c:	movl	$1, %esi
+  400ea1:	movq	-384(%rbp), %rdi
+  400ea8:	callq	2499 <__softboundcets_store_key_shadow_stack>
+  400ead:	movl	$1, %esi
+  400eb2:	movq	-360(%rbp), %rdi
+  400eb9:	callq	2546 <__softboundcets_store_lock_shadow_stack>
+  400ebe:	movq	-344(%rbp), %rdi
+  400ec5:	callq	70 <deref>
+  400eca:	movl	%eax, -388(%rbp)
+  400ed0:	callq	2587 <__softboundcets_deallocate_shadow_stack_space>
+  400ed5:	movl	-348(%rbp), %eax
+  400edb:	movl	-388(%rbp), %esi
+  400ee1:	addl	%esi, %eax
+  400ee3:	movq	-176(%rbp), %rdi
+  400eea:	movl	%eax, -392(%rbp)
+  400ef0:	callq	3995 <__softboundcets_stack_memory_deallocation>
+  400ef5:	movl	-392(%rbp), %eax
+  400efb:	addq	$376, %rsp
+  400f02:	popq	%rbx
+  400f03:	popq	%r14
+  400f05:	popq	%r15
+  400f07:	popq	%rbp
+  400f08:	retq
+  400f09:	nopl	(%rax)
+
+deref:
+; /home/hedenc/softboundcets-34-master/tests/test1.c:4
+  400f10:	pushq	%rbp
+  400f11:	movq	%rsp, %rbp
+  400f14:	subq	$176, %rsp
+  400f1b:	leaq	-40(%rbp), %rax
+  400f1f:	leaq	-48(%rbp), %rsi
+  400f23:	movq	%rdi, -64(%rbp)
+  400f27:	movq	%rax, %rdi
+  400f2a:	callq	4081 <__softboundcets_stack_memory_allocation>
+  400f2f:	movl	$1, %edi
+  400f34:	movq	-48(%rbp), %rax
+  400f38:	movq	%rax, -72(%rbp)
+  400f3c:	callq	1967 <__softboundcets_load_base_shadow_stack>
+  400f41:	movl	$1, %edi
+  400f46:	movq	%rax, -80(%rbp)
+  400f4a:	callq	2017 <__softboundcets_load_bound_shadow_stack>
+  400f4f:	movl	$1, %edi
+  400f54:	movq	%rax, -88(%rbp)
+  400f58:	callq	2067 <__softboundcets_load_key_shadow_stack>
+  400f5d:	movl	$1, %edi
+  400f62:	movq	%rax, -96(%rbp)
+  400f66:	callq	2117 <__softboundcets_load_lock_shadow_stack>
+  400f6b:	movq	%rax, -104(%rbp)
+  400f6f:	callq	4396 <__softboundcets_get_global_lock>
+  400f74:	movabsq	$0, %rsi
+  400f7e:	addq	$8, %rsi
+  400f85:	leaq	-56(%rbp), %rcx
+  400f89:	movq	%rcx, %rdx
+  400f8c:	movq	%rcx, %r8
+  400f8f:	addq	$8, %r8
+  400f96:	movq	%rdx, %rdi
+  400f99:	movq	%rsi, -112(%rbp)
+  400f9d:	movq	%r8, %rsi
+  400fa0:	movq	%rcx, %rdx
+  400fa3:	movq	-112(%rbp), %rcx
+  400fa7:	movq	%rax, -120(%rbp)
+  400fab:	callq	3136 <__softboundcets_spatial_store_dereference_check>
+  400fb0:	leaq	-56(%rbp), %rax
+  400fb4:	movq	-64(%rbp), %rcx
+  400fb8:	movq	%rcx, -56(%rbp)
+  400fbc:	movq	%rax, %rdi
+  400fbf:	movq	-80(%rbp), %rsi
+  400fc3:	movq	-88(%rbp), %rdx
+  400fc7:	movq	-96(%rbp), %rcx
+  400fcb:	movq	-104(%rbp), %r8
+  400fcf:	callq	3308 <__softboundcets_metadata_store>
+  400fd4:	leaq	-8(%rbp), %rsi
+  400fd8:	leaq	-16(%rbp), %rdx
+  400fdc:	leaq	-24(%rbp), %rcx
+  400fe0:	leaq	-32(%rbp), %r8
+  400fe4:	leaq	-56(%rbp), %rax
+; /home/hedenc/softboundcets-34-master/tests/test1.c:5
+  400fe8:	movq	-56(%rbp), %rdi
+  400fec:	movq	%rdi, -128(%rbp)
+  400ff0:	movq	%rax, %rdi
+  400ff3:	callq	3560 <__softboundcets_metadata_load>
+  400ff8:	movabsq	$0, %rax
+  401002:	addq	$4, %rax
+  401008:	movq	-8(%rbp), %rcx
+  40100c:	movq	-16(%rbp), %rdx
+  401010:	movq	-24(%rbp), %rsi
+  401014:	movq	-32(%rbp), %rdi
+  401018:	movq	-128(%rbp), %r8
+  40101c:	movq	%rdi, -136(%rbp)
+  401023:	movq	%rcx, %rdi
+  401026:	movq	%rsi, -144(%rbp)
+  40102d:	movq	%rdx, %rsi
+  401030:	movq	%rdx, -152(%rbp)
+  401037:	movq	%r8, %rdx
+  40103a:	movq	%rcx, -160(%rbp)
+  401041:	movq	%rax, %rcx
+  401044:	callq	2935 <__softboundcets_spatial_load_dereference_check>
+  401049:	movq	-136(%rbp), %rdi
+  401050:	movq	-144(%rbp), %rsi
+  401057:	movq	-160(%rbp), %rdx
+  40105e:	movq	-152(%rbp), %rcx
+  401065:	callq	3542 <__softboundcets_temporal_load_dereference_check>
+  40106a:	movq	-128(%rbp), %rax
+  40106e:	movl	(%rax), %eax
+  401070:	movq	-72(%rbp), %rdi
+  401074:	movl	%eax, -164(%rbp)
+  40107a:	callq	3601 <__softboundcets_stack_memory_deallocation>
+  40107f:	movl	-164(%rbp), %eax
+  401085:	addq	$176, %rsp
+  40108c:	popq	%rbp
+  40108d:	retq
+  40108e:	nop
+
+__softboundcets_global_init:
+  401090:	pushq	%rbp
+  401091:	movq	%rsp, %rbp
+  401094:	movl	$1, %edi
+  401099:	callq	18 <__softboundcets_init>
+  40109e:	popq	%rbp
+  40109f:	retq
+
+__softboundcets_global_init:
+  4010a0:	jmp	14 <__softboundcets_init>
+  4010a2:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_init:
+  4010b0:	pushq	%rax
+  4010b1:	movb	16441(%rip), %al
+  4010b7:	testb	%al, %al
+  4010b9:	jne	345 <__softboundcets_init+0x168>
+  4010bf:	movb	$1, 16426(%rip)
+  4010c6:	movl	$0, %edi
+  4010cb:	movl	$536870912, %esi
+  4010d0:	movl	$3, %edx
+  4010d5:	movl	$16418, %ecx
+  4010da:	movl	$4294967295, %r8d
+  4010e0:	xorl	%r9d, %r9d
+  4010e3:	callq	-2136
+  4010e8:	cmpq	$-1, %rax
+  4010ec:	movq	%rax, 16333(%rip)
+  4010f3:	je	289 <__softboundcets_init+0x16A>
+  4010f9:	movq	%rax, 16352(%rip)
+  401100:	movl	$0, %edi
+  401105:	movl	$524288, %esi
+  40110a:	movl	$3, %edx
+  40110f:	movl	$16418, %ecx
+  401114:	movl	$4294967295, %r8d
+  40111a:	xorl	%r9d, %r9d
+  40111d:	callq	-2194
+  401122:	cmpq	$-1, %rax
+  401126:	movq	%rax, 16267(%rip)
+  40112d:	je	256 <__softboundcets_init+0x183>
+  401133:	movl	$0, %edi
+  401138:	movl	$262144, %esi
+  40113d:	movl	$3, %edx
+  401142:	movl	$16418, %ecx
+  401147:	movl	$4294967295, %r8d
+  40114d:	xorl	%r9d, %r9d
+  401150:	callq	-2245
+  401155:	cmpq	$-1, %rax
+  401159:	movq	%rax, 16232(%rip)
+  401160:	je	230 <__softboundcets_init+0x19C>
+  401166:	movq	$1, (%rax)
+  40116d:	movl	$0, %edi
+  401172:	movl	$32768, %esi
+  401177:	movl	$3, %edx
+  40117c:	movl	$16418, %ecx
+  401181:	movl	$4294967295, %r8d
+  401187:	xorl	%r9d, %r9d
+  40118a:	callq	-2303
+  40118f:	cmpq	$-1, %rax
+  401193:	movq	%rax, 16142(%rip)
+  40119a:	je	197 <__softboundcets_init+0x1B5>
+  4011a0:	movq	$0, (%rax)
+  4011a7:	movq	16122(%rip), %rax
+  4011ae:	movq	$0, 8(%rax)
+  4011b6:	movl	$0, %edi
+  4011bb:	movl	$268435456, %esi
+  4011c0:	movl	$3, %edx
+  4011c5:	movl	$16418, %ecx
+  4011ca:	movl	$4294967295, %r8d
+  4011d0:	xorl	%r9d, %r9d
+  4011d3:	callq	-2376
+  4011d8:	cmpq	$-1, %rax
+  4011dc:	movq	%rax, 16109(%rip)
+  4011e3:	je	149 <__softboundcets_init+0x1CE>
+  4011e9:	movl	$0, %edi
+  4011ee:	movl	$67108864, %esi
+  4011f3:	movl	$3, %edx
+  4011f8:	movl	$16418, %ecx
+  4011fd:	movl	$4294967295, %r8d
+  401203:	xorl	%r9d, %r9d
+  401206:	callq	-2427
+  40120b:	cmpq	$-1, %rax
+  40120f:	movq	%rax, 16098(%rip)
+  401216:	je	127 <__softboundcets_init+0x1E7>
+  401218:	popq	%rax
+  401219:	retq
+  40121a:	movl	$4204366, %edi
+  40121f:	movl	$4204414, %esi
+  401224:	movl	$126, %edx
+  401229:	movl	$4204430, %ecx
+  40122e:	callq	-2451
+  401233:	movl	$4204458, %edi
+  401238:	movl	$4204414, %esi
+  40123d:	movl	$134, %edx
+  401242:	movl	$4204430, %ecx
+  401247:	callq	-2476
+  40124c:	movl	$4204515, %edi
+  401251:	movl	$4204414, %esi
+  401256:	movl	$141, %edx
+  40125b:	movl	$4204430, %ecx
+  401260:	callq	-2501
+  401265:	movl	$4204557, %edi
+  40126a:	movl	$4204414, %esi
+  40126f:	movl	$151, %edx
+  401274:	movl	$4204430, %ecx
+  401279:	callq	-2526
+  40127e:	movl	$4204603, %edi
+  401283:	movl	$4204414, %esi
+  401288:	movl	$163, %edx
+  40128d:	movl	$4204430, %ecx
+  401292:	callq	-2551
+  401297:	movl	$4204648, %edi
+  40129c:	movl	$4204414, %esi
+  4012a1:	movl	$172, %edx
+  4012a6:	movl	$4204430, %ecx
+  4012ab:	callq	-2576
+
+__softboundcets_stub:
+  4012b0:	retq
+  4012b1:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_safe_mmap:
+  4012c0:	jmp	-2613
+  4012c5:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_printf:
+  4012d0:	subq	$200, %rsp
+  4012d7:	movq	%rdi, %r10
+  4012da:	testb	%al, %al
+  4012dc:	je	49 <__softboundcets_printf+0x3F>
+  4012de:	movaps	%xmm0, 48(%rsp)
+  4012e3:	movaps	%xmm1, 64(%rsp)
+  4012e8:	movaps	%xmm2, 80(%rsp)
+  4012ed:	movaps	%xmm3, 96(%rsp)
+  4012f2:	movaps	%xmm4, 112(%rsp)
+  4012f7:	movaps	%xmm5, 128(%rsp)
+  4012ff:	movaps	%xmm6, 144(%rsp)
+  401307:	movaps	%xmm7, 160(%rsp)
+  40130f:	movq	%r9, 40(%rsp)
+  401314:	movq	%r8, 32(%rsp)
+  401319:	movq	%rcx, 24(%rsp)
+  40131e:	movq	%rdx, 16(%rsp)
+  401323:	movq	%rsi, 8(%rsp)
+  401328:	leaq	(%rsp), %rax
+  40132c:	movq	%rax, 192(%rsp)
+  401334:	leaq	208(%rsp), %rax
+  40133c:	movq	%rax, 184(%rsp)
+  401344:	movl	$48, 180(%rsp)
+  40134f:	movl	$8, 176(%rsp)
+  40135a:	movq	15775(%rip), %rdi
+  401361:	leaq	176(%rsp), %rdx
+  401369:	movq	%r10, %rsi
+  40136c:	callq	-2753
+  401371:	addq	$200, %rsp
+  401378:	retq
+  401379:	nopl	(%rax)
+
+__softboundcets_abort:
+  401380:	pushq	%rbp
+  401381:	pushq	%rbx
+  401382:	subq	$808, %rsp
+  401389:	movq	15728(%rip), %rcx
+  401390:	movl	$4204301, %edi
+  401395:	movl	$61, %esi
+  40139a:	movl	$1, %edx
+  40139f:	callq	-2788
+  4013a4:	leaq	(%rsp), %rbx
+  4013a8:	movl	$100, %esi
+  4013ad:	movq	%rbx, %rdi
+  4013b0:	callq	-2789
+  4013b5:	movl	%eax, %ebp
+  4013b7:	movq	15682(%rip), %rdi
+  4013be:	callq	-2787
+  4013c3:	movq	%rbx, %rdi
+  4013c6:	movl	%ebp, %esi
+  4013c8:	movl	%eax, %edx
+  4013ca:	callq	-2783
+  4013cf:	movq	15658(%rip), %rcx
+  4013d6:	movl	$4204363, %edi
+  4013db:	movl	$2, %esi
+  4013e0:	movl	$1, %edx
+  4013e5:	callq	-2858
+  4013ea:	callq	-2799
+  4013ef:	nop
+
+main:
+  4013f0:	pushq	%rbp
+  4013f1:	pushq	%r15
+  4013f3:	pushq	%r14
+  4013f5:	pushq	%r13
+  4013f7:	pushq	%r12
+  4013f9:	pushq	%rbx
+  4013fa:	subq	$24, %rsp
+  4013fe:	movq	%rsi, (%rsp)
+  401402:	movl	%edi, %ebx
+  401404:	movl	$1, %edi
+  401409:	callq	-2814
+  40140e:	movq	%rax, 15571(%rip)
+  401415:	movq	15484(%rip), %rcx
+  40141c:	movq	%rcx, 16(%rsp)
+  401421:	leaq	1(%rcx), %rax
+  401425:	movq	%rax, 15468(%rip)
+  40142c:	movq	15493(%rip), %rdx
+  401433:	movq	%rdx, 8(%rsp)
+  401438:	leaq	8(%rdx), %rax
+  40143c:	movq	%rax, 15477(%rip)
+  401443:	movq	%rcx, (%rdx)
+  401446:	xorl	%r14d, %r14d
+  401449:	movl	$4294967292, %edi
+  40144e:	xorl	%esi, %esi
+  401450:	callq	-2869
+  401455:	testl	%ebx, %ebx
+  401457:	movl	%ebx, %r13d
+  40145a:	jle	164 <main+0x114>
+  401460:	movq	(%rsp), %r15
+  401464:	nopw	%cs:(%rax,%rax)
+  401470:	movq	(%r15), %rbx
+  401473:	movq	%rbx, %rdi
+  401476:	callq	-2891
+  40147b:	movq	%rax, %rbp
+  40147e:	movq	%r15, %r12
+  401481:	shrq	$25, %r12
+  401485:	movq	15468(%rip), %rax
+  40148c:	movq	(%rax,%r12,8), %rax
+  401490:	testq	%rax, %rax
+  401493:	jne	51 <main+0xD8>
+  401495:	xorl	%edi, %edi
+  401497:	movl	$134217728, %esi
+  40149c:	movl	$3, %edx
+  4014a1:	movl	$16418, %ecx
+  4014a6:	movl	$4294967295, %r8d
+  4014ac:	xorl	%r9d, %r9d
+  4014af:	callq	-3108
+  4014b4:	testq	%rax, %rax
+  4014b7:	movq	15418(%rip), %rcx
+  4014be:	movq	%rax, (%rcx,%r12,8)
+  4014c2:	je	397 <main+0x265>
+  4014c8:	leaq	1(%rbp,%rbx), %rcx
+  4014cd:	movq	%r15, %rdx
+  4014d0:	andq	$33554424, %rdx
+  4014d7:	movq	%rbx, (%rax,%rdx,4)
+  4014db:	movq	%rcx, 8(%rax,%rdx,4)
+  4014e0:	movq	16(%rsp), %rcx
+  4014e5:	movq	%rcx, 16(%rax,%rdx,4)
+  4014ea:	movq	8(%rsp), %rcx
+  4014ef:	movq	%rcx, 24(%rax,%rdx,4)
+  4014f4:	addq	$8, %r15
+  4014f8:	incl	%r14d
+  4014fb:	cmpl	%r13d, %r14d
+  4014fe:	jl	-148 <main+0x80>
+  401504:	callq	-3017
+  401509:	movq	%rax, %rbx
+  40150c:	movq	(%rbx), %r15
+  40150f:	movq	15282(%rip), %r14
+  401516:	movq	%rbx, %rbp
+  401519:	shrq	$25, %rbp
+  40151d:	movq	15316(%rip), %rax
+  401524:	movq	(%rax,%rbp,8), %rax
+  401528:	testq	%rax, %rax
+  40152b:	jne	54 <main+0x173>
+  40152d:	movl	$0, %edi
+  401532:	movl	$134217728, %esi
+  401537:	movl	$3, %edx
+  40153c:	movl	$16418, %ecx
+  401541:	movl	$4294967295, %r8d
+  401547:	xorl	%r9d, %r9d
+  40154a:	callq	-3263
+  40154f:	testq	%rax, %rax
+  401552:	movq	15263(%rip), %rcx
+  401559:	movq	%rax, (%rcx,%rbp,8)
+  40155d:	je	242 <main+0x265>
+  401563:	leaq	-129(%r15), %rcx
+  40156a:	addq	$256, %r15
+  401571:	andq	$33554424, %rbx
+  401578:	movq	%rcx, (%rax,%rbx,4)
+  40157c:	movq	%r15, 8(%rax,%rbx,4)
+  401581:	movq	$1, 16(%rax,%rbx,4)
+  40158a:	movq	%r14, 24(%rax,%rbx,4)
+  40158f:	movl	%r13d, %edi
+  401592:	movslq	%edi, %rax
+  401595:	movq	(%rsp), %rsi
+  401599:	leaq	8(%rsi,%rax,8), %rax
+  40159e:	movq	15107(%rip), %rcx
+  4015a5:	movq	8(%rcx), %rdx
+  4015a9:	leaq	16(%rcx,%rdx,8), %rbp
+  4015ae:	movq	%rbp, 15091(%rip)
+  4015b5:	movq	%rdx, 16(%rcx,%rdx,8)
+  4015ba:	movq	15079(%rip), %rcx
+  4015c1:	movq	$8, 8(%rcx)
+  4015c9:	movq	15064(%rip), %rcx
+  4015d0:	movq	%rsi, 48(%rcx)
+  4015d4:	movq	15053(%rip), %rcx
+  4015db:	movq	%rax, 56(%rcx)
+  4015df:	movq	15042(%rip), %rax
+  4015e6:	movq	16(%rsp), %rcx
+  4015eb:	movq	%rcx, 64(%rax)
+  4015ef:	movq	15026(%rip), %rax
+  4015f6:	movq	8(%rsp), %rcx
+  4015fb:	movq	%rcx, 72(%rax)
+  4015ff:	callq	-2916 <softboundcets_pseudo_main>
+  401604:	movq	15005(%rip), %rcx
+  40160b:	movq	(%rcx), %rdx
+  40160e:	cmpq	$4097, %rdx
+  401615:	jae	87 <main+0x27E>
+  401617:	movq	$-2, %rsi
+  40161e:	subq	%rdx, %rsi
+  401621:	leaq	(%rcx,%rsi,8), %rcx
+  401625:	movq	%rcx, 14972(%rip)
+  40162c:	movq	14981(%rip), %rcx
+  401633:	leaq	-8(%rcx), %rdx
+  401637:	movq	%rdx, 14970(%rip)
+  40163e:	movq	$0, -8(%rcx)
+  401646:	addq	$24, %rsp
+  40164a:	popq	%rbx
+  40164b:	popq	%r12
+  40164d:	popq	%r13
+  40164f:	popq	%r14
+  401651:	popq	%r15
+  401653:	popq	%rbp
+  401654:	retq
+  401655:	movl	$4204020, %edi
+  40165a:	movl	$4203248, %esi
+  40165f:	movl	$778, %edx
+  401664:	movl	$4204055, %ecx
+  401669:	callq	-3534
+  40166e:	movl	$4203699, %edi
+  401673:	movl	$4203248, %esi
+  401678:	movl	$345, %edx
+  40167d:	movl	$4203770, %ecx
+  401682:	callq	-3559
+  401687:	nopw	(%rax,%rax)
+
+__softboundcets_safe_calloc:
+  401690:	jmp	-3397
+  401695:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_safe_malloc:
+  4016a0:	jmp	-3477
+  4016a5:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_safe_free:
+  4016b0:	jmp	-3413
+  4016b5:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_allocate_shadow_stack_space:
+  4016c0:	movq	14817(%rip), %rax
+  4016c7:	movq	8(%rax), %rcx
+  4016cb:	leaq	16(%rax,%rcx,8), %rdx
+  4016d0:	movq	%rdx, 14801(%rip)
+  4016d7:	movq	%rcx, 16(%rax,%rcx,8)
+  4016dc:	movq	14789(%rip), %rax
+  4016e3:	shll	$2, %edi
+  4016e6:	movslq	%edi, %rcx
+  4016e9:	movq	%rcx, 8(%rax)
+  4016ed:	retq
+  4016ee:	nop
+
+__softboundcets_load_base_shadow_stack:
+  4016f0:	pushq	%rax
+  4016f1:	testl	%edi, %edi
+  4016f3:	js	22 <__softboundcets_load_base_shadow_stack+0x1B>
+  4016f5:	leal	2(,%rdi,4), %eax
+  4016fc:	cltq
+  4016fe:	movq	14755(%rip), %rcx
+  401705:	movq	(%rcx,%rax,8), %rax
+  401709:	popq	%rdx
+  40170a:	retq
+  40170b:	movl	$4203236, %edi
+  401710:	movl	$4203248, %esi
+  401715:	movl	$267, %edx
+  40171a:	movl	$4203266, %ecx
+  40171f:	callq	-3716
+  401724:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_load_bound_shadow_stack:
+  401730:	pushq	%rax
+  401731:	testl	%edi, %edi
+  401733:	js	22 <__softboundcets_load_bound_shadow_stack+0x1B>
+  401735:	leal	3(,%rdi,4), %eax
+  40173c:	cltq
+  40173e:	movq	14691(%rip), %rcx
+  401745:	movq	(%rcx,%rax,8), %rax
+  401749:	popq	%rdx
+  40174a:	retq
+  40174b:	movl	$4203236, %edi
+  401750:	movl	$4203248, %esi
+  401755:	movl	$276, %edx
+  40175a:	movl	$4203316, %ecx
+  40175f:	callq	-3780
+  401764:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_load_key_shadow_stack:
+  401770:	pushq	%rax
+  401771:	testl	%edi, %edi
+  401773:	js	22 <__softboundcets_load_key_shadow_stack+0x1B>
+  401775:	leal	4(,%rdi,4), %eax
+  40177c:	cltq
+  40177e:	movq	14627(%rip), %rcx
+  401785:	movq	(%rcx,%rax,8), %rax
+  401789:	popq	%rdx
+  40178a:	retq
+  40178b:	movl	$4203236, %edi
+  401790:	movl	$4203248, %esi
+  401795:	movl	$286, %edx
+  40179a:	movl	$4203367, %ecx
+  40179f:	callq	-3844
+  4017a4:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_load_lock_shadow_stack:
+  4017b0:	pushq	%rax
+  4017b1:	testl	%edi, %edi
+  4017b3:	js	22 <__softboundcets_load_lock_shadow_stack+0x1B>
+  4017b5:	leal	5(,%rdi,4), %eax
+  4017bc:	cltq
+  4017be:	movq	14563(%rip), %rcx
+  4017c5:	movq	(%rcx,%rax,8), %rax
+  4017c9:	popq	%rdx
+  4017ca:	retq
+  4017cb:	movl	$4203236, %edi
+  4017d0:	movl	$4203248, %esi
+  4017d5:	movl	$295, %edx
+  4017da:	movl	$4203417, %ecx
+  4017df:	callq	-3908
+  4017e4:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_store_base_shadow_stack:
+  4017f0:	pushq	%rax
+  4017f1:	testl	%esi, %esi
+  4017f3:	js	22 <__softboundcets_store_base_shadow_stack+0x1B>
+  4017f5:	leal	2(,%rsi,4), %eax
+  4017fc:	cltq
+  4017fe:	movq	14499(%rip), %rcx
+  401805:	movq	%rdi, (%rcx,%rax,8)
+  401809:	popq	%rax
+  40180a:	retq
+  40180b:	movl	$4203236, %edi
+  401810:	movl	$4203248, %esi
+  401815:	movl	$304, %edx
+  40181a:	movl	$4203467, %ecx
+  40181f:	callq	-3972
+  401824:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_store_bound_shadow_stack:
+  401830:	pushq	%rax
+  401831:	testl	%esi, %esi
+  401833:	js	22 <__softboundcets_store_bound_shadow_stack+0x1B>
+  401835:	leal	3(,%rsi,4), %eax
+  40183c:	cltq
+  40183e:	movq	14435(%rip), %rcx
+  401845:	movq	%rdi, (%rcx,%rax,8)
+  401849:	popq	%rax
+  40184a:	retq
+  40184b:	movl	$4203236, %edi
+  401850:	movl	$4203248, %esi
+  401855:	movl	$314, %edx
+  40185a:	movl	$4203525, %ecx
+  40185f:	callq	-4036
+  401864:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_store_key_shadow_stack:
+  401870:	pushq	%rax
+  401871:	testl	%esi, %esi
+  401873:	js	22 <__softboundcets_store_key_shadow_stack+0x1B>
+  401875:	leal	4(,%rsi,4), %eax
+  40187c:	cltq
+  40187e:	movq	14371(%rip), %rcx
+  401885:	movq	%rdi, (%rcx,%rax,8)
+  401889:	popq	%rax
+  40188a:	retq
+  40188b:	movl	$4203236, %edi
+  401890:	movl	$4203248, %esi
+  401895:	movl	$322, %edx
+  40189a:	movl	$4203584, %ecx
+  40189f:	callq	-4100
+  4018a4:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_store_lock_shadow_stack:
+  4018b0:	pushq	%rax
+  4018b1:	testl	%esi, %esi
+  4018b3:	js	22 <__softboundcets_store_lock_shadow_stack+0x1B>
+  4018b5:	leal	5(,%rsi,4), %eax
+  4018bc:	cltq
+  4018be:	movq	14307(%rip), %rcx
+  4018c5:	movq	%rdi, (%rcx,%rax,8)
+  4018c9:	popq	%rax
+  4018ca:	retq
+  4018cb:	movl	$4203236, %edi
+  4018d0:	movl	$4203248, %esi
+  4018d5:	movl	$332, %edx
+  4018da:	movl	$4203641, %ecx
+  4018df:	callq	-4164
+  4018e4:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_deallocate_shadow_stack_space:
+  4018f0:	pushq	%rax
+  4018f1:	movq	14256(%rip), %rax
+  4018f8:	movq	(%rax), %rcx
+  4018fb:	cmpq	$4097, %rcx
+  401902:	jae	23 <__softboundcets_deallocate_shadow_stack_space+0x2B>
+  401904:	movq	$-2, %rdx
+  40190b:	subq	%rcx, %rdx
+  40190e:	leaq	(%rax,%rdx,8), %rax
+  401912:	movq	%rax, 14223(%rip)
+  401919:	popq	%rax
+  40191a:	retq
+  40191b:	movl	$4203699, %edi
+  401920:	movl	$4203248, %esi
+  401925:	movl	$345, %edx
+  40192a:	movl	$4203770, %ecx
+  40192f:	callq	-4244
+  401934:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_trie_allocate:
+  401940:	movl	$0, %edi
+  401945:	movl	$134217728, %esi
+  40194a:	movl	$3, %edx
+  40194f:	movl	$16418, %ecx
+  401954:	movl	$4294967295, %r8d
+  40195a:	xorl	%r9d, %r9d
+  40195d:	jmp	-4306
+  401962:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_dummy:
+  401970:	movl	$4203823, %edi
+  401975:	xorl	%eax, %eax
+  401977:	jmp	-4108
+  40197c:	nopl	(%rax)
+
+__softboundcets_introspect_metadata:
+  401980:	movl	%ecx, %r8d
+  401983:	movq	%rdx, %rcx
+  401986:	movq	%rdi, %r9
+  401989:	movl	$4203837, %edi
+  40198e:	xorl	%eax, %eax
+  401990:	movq	%rsi, %rdx
+  401993:	movq	%r9, %rsi
+  401996:	jmp	-4139
+  40199b:	nopl	(%rax,%rax)
+
+__softboundcets_copy_metadata:
+  4019a0:	pushq	%rbp
+  4019a1:	pushq	%r15
+  4019a3:	pushq	%r14
+  4019a5:	pushq	%r13
+  4019a7:	pushq	%r12
+  4019a9:	pushq	%rbx
+  4019aa:	subq	$24, %rsp
+  4019ae:	movq	%rdx, %rbp
+  4019b1:	movq	%rbp, 8(%rsp)
+  4019b6:	movq	%rdi, 16(%rsp)
+  4019bb:	testb	$7, %sil
+  4019bf:	jne	424 <__softboundcets_copy_metadata+0x1CD>
+  4019c5:	movq	%rsi, (%rsp)
+  4019c9:	leaq	(%rsi,%rbp), %rcx
+  4019cd:	movq	%rsi, %rax
+  4019d0:	shrq	$25, %rax
+  4019d4:	shrq	$25, %rcx
+  4019d8:	cmpq	%rcx, %rax
+  4019db:	jne	150 <__softboundcets_copy_metadata+0xD7>
+  4019e1:	movq	16(%rsp), %rcx
+  4019e6:	movq	%rcx, %rbx
+  4019e9:	shrq	$25, %rbx
+  4019ed:	leaq	(%rcx,%rbp), %rcx
+  4019f1:	shrq	$25, %rcx
+  4019f5:	cmpq	%rcx, %rbx
+  4019f8:	jne	125 <__softboundcets_copy_metadata+0xD7>
+  4019fa:	movq	14071(%rip), %rcx
+  401a01:	movq	(%rcx,%rax,8), %r14
+  401a05:	testq	%r14, %r14
+  401a08:	je	351 <__softboundcets_copy_metadata+0x1CD>
+  401a0e:	movq	(%rcx,%rbx,8), %rax
+  401a12:	testq	%rax, %rax
+  401a15:	jne	45 <__softboundcets_copy_metadata+0xA4>
+  401a17:	movl	$0, %edi
+  401a1c:	movl	$134217728, %esi
+  401a21:	movl	$3, %edx
+  401a26:	movl	$16418, %ecx
+  401a2b:	movl	$4294967295, %r8d
+  401a31:	xorl	%r9d, %r9d
+  401a34:	callq	-4521
+  401a39:	movq	14008(%rip), %rcx
+  401a40:	movq	%rax, (%rcx,%rbx,8)
+  401a44:	movq	16(%rsp), %rcx
+  401a49:	andq	$33554424, %rcx
+  401a50:	leaq	(%rax,%rcx,4), %rdi
+  401a54:	movq	(%rsp), %rax
+  401a58:	andq	$33554424, %rax
+  401a5e:	leaq	(%r14,%rax,4), %rsi
+  401a62:	shlq	$2, %rbp
+  401a66:	andq	$-32, %rbp
+  401a6a:	movq	%rbp, %rdx
+  401a6d:	callq	-4338
+  401a72:	jmp	246 <__softboundcets_copy_metadata+0x1CD>
+  401a77:	xorl	%ebx, %ebx
+  401a79:	testq	%rbp, %rbp
+  401a7c:	je	235 <__softboundcets_copy_metadata+0x1CD>
+  401a82:	nopw	%cs:(%rax,%rax)
+  401a90:	movq	(%rsp), %rax
+  401a94:	leaq	(%rax,%rbx), %rbp
+  401a98:	movq	%rbp, %r12
+  401a9b:	shrq	$25, %r12
+  401a9f:	movq	16(%rsp), %rax
+  401aa4:	leaq	(%rax,%rbx), %r15
+  401aa8:	movq	%r15, %r14
+  401aab:	shrq	$25, %r14
+  401aaf:	shrq	$3, %r15
+  401ab3:	shrq	$3, %rbp
+  401ab7:	movq	13882(%rip), %rax
+  401abe:	movq	(%rax,%r12,8), %r13
+  401ac2:	testq	%r13, %r13
+  401ac5:	jne	52 <__softboundcets_copy_metadata+0x15B>
+  401ac7:	xorl	%edi, %edi
+  401ac9:	movl	$134217728, %esi
+  401ace:	movl	$3, %edx
+  401ad3:	movl	$16418, %ecx
+  401ad8:	movl	$4294967295, %r8d
+  401ade:	xorl	%r9d, %r9d
+  401ae1:	callq	-4694
+  401ae6:	movq	%rax, %r13
+  401ae9:	movq	13832(%rip), %rax
+  401af0:	movq	%r13, (%rax,%r12,8)
+  401af4:	movq	13821(%rip), %rax
+  401afb:	andq	$4194303, %r15
+  401b02:	andq	$4194303, %rbp
+  401b09:	movq	(%rax,%r14,8), %rax
+  401b0d:	testq	%rax, %rax
+  401b10:	jne	42 <__softboundcets_copy_metadata+0x19C>
+  401b12:	xorl	%edi, %edi
+  401b14:	movl	$134217728, %esi
+  401b19:	movl	$3, %edx
+  401b1e:	movl	$16418, %ecx
+  401b23:	movl	$4294967295, %r8d
+  401b29:	xorl	%r9d, %r9d
+  401b2c:	callq	-4769
+  401b31:	movq	13760(%rip), %rcx
+  401b38:	movq	%rax, (%rcx,%r14,8)
+  401b3c:	shlq	$5, %r15
+  401b40:	shlq	$5, %rbp
+  401b44:	movups	(%r13,%rbp), %xmm0
+  401b4a:	movups	16(%r13,%rbp), %xmm1
+  401b50:	movups	%xmm1, 16(%rax,%r15)
+  401b56:	movups	%xmm0, (%rax,%r15)
+  401b5b:	addq	$8, %rbx
+  401b5f:	movq	8(%rsp), %rax
+  401b64:	cmpq	%rax, %rbx
+  401b67:	jb	-221 <__softboundcets_copy_metadata+0xF0>
+  401b6d:	addq	$24, %rsp
+  401b71:	popq	%rbx
+  401b72:	popq	%r12
+  401b74:	popq	%r13
+  401b76:	popq	%r14
+  401b78:	popq	%r15
+  401b7a:	popq	%rbp
+  401b7b:	retq
+  401b7c:	nopl	(%rax)
+
+__softboundcets_shrink_bounds:
+  401b80:	cmpq	%rdx, %rdi
+  401b83:	cmovbq	%rdx, %rdi
+  401b87:	cmpq	%rcx, %rsi
+  401b8a:	movq	%rdi, (%r8)
+  401b8d:	cmovaq	%rcx, %rsi
+  401b91:	movq	%rsi, (%r9)
+  401b94:	retq
+  401b95:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_spatial_call_dereference_check:
+  401ba0:	pushq	%rax
+  401ba1:	cmpq	%rsi, %rdi
+  401ba4:	jne	2 <__softboundcets_spatial_call_dereference_check+0x8>
+  401ba6:	popq	%rax
+  401ba7:	retq
+  401ba8:	cmpq	%rdi, %rdx
+  401bab:	je	-7 <__softboundcets_spatial_call_dereference_check+0x6>
+  401bad:	callq	-2098 <__softboundcets_abort>
+  401bb2:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_spatial_load_dereference_check:
+  401bc0:	pushq	%rax
+  401bc1:	movq	%rdx, %r8
+  401bc4:	movq	%rsi, %rdx
+  401bc7:	movq	%rdi, %rsi
+  401bca:	cmpq	%rsi, %r8
+  401bcd:	jb	10 <__softboundcets_spatial_load_dereference_check+0x19>
+  401bcf:	addq	%r8, %rcx
+  401bd2:	cmpq	%rdx, %rcx
+  401bd5:	ja	2 <__softboundcets_spatial_load_dereference_check+0x19>
+  401bd7:	popq	%rax
+  401bd8:	retq
+  401bd9:	movl	$4203896, %edi
+  401bde:	xorl	%eax, %eax
+  401be0:	movq	%r8, %rcx
+  401be3:	callq	-2328 <__softboundcets_printf>
+  401be8:	callq	-2157 <__softboundcets_abort>
+  401bed:	nopl	(%rax)
+
+__softboundcets_spatial_store_dereference_check:
+  401bf0:	pushq	%rax
+  401bf1:	movq	%rcx, %r8
+  401bf4:	movq	%rdx, %rcx
+  401bf7:	movq	%rsi, %rdx
+  401bfa:	movq	%rdi, %rsi
+  401bfd:	leaq	(%rcx,%r8), %r9
+  401c01:	cmpq	%rsi, %rcx
+  401c04:	jb	7 <__softboundcets_spatial_store_dereference_check+0x1D>
+  401c06:	cmpq	%rdx, %r9
+  401c09:	ja	2 <__softboundcets_spatial_store_dereference_check+0x1D>
+  401c0b:	popq	%rax
+  401c0c:	retq
+  401c0d:	movl	$4203934, %edi
+  401c12:	xorl	%eax, %eax
+  401c14:	callq	-2377 <__softboundcets_printf>
+  401c19:	callq	-2206 <__softboundcets_abort>
+  401c1e:	nop
+
+__softboundcets_memcopy_check:
+  401c20:	pushq	%rax
+  401c21:	movabsq	$9223372036854775807, %rax
+  401c2b:	cmpq	%rax, %rdx
+  401c2e:	jae	71 <__softboundcets_memcopy_check+0x57>
+  401c30:	cmpq	%rcx, %rdi
+  401c33:	jb	66 <__softboundcets_memcopy_check+0x57>
+  401c35:	movq	%r8, %rax
+  401c38:	subq	%rdx, %rax
+  401c3b:	cmpq	%rdi, %rax
+  401c3e:	jb	55 <__softboundcets_memcopy_check+0x57>
+  401c40:	cmpq	%rdx, %r8
+  401c43:	jb	50 <__softboundcets_memcopy_check+0x57>
+  401c45:	cmpq	%r9, %rsi
+  401c48:	jb	45 <__softboundcets_memcopy_check+0x57>
+  401c4a:	negq	%rdx
+  401c4d:	addq	16(%rsp), %rdx
+  401c52:	cmpq	%rsi, %rdx
+  401c55:	jb	32 <__softboundcets_memcopy_check+0x57>
+  401c57:	movq	32(%rsp), %rax
+  401c5c:	movq	24(%rsp), %rcx
+  401c61:	cmpq	%rcx, (%rax)
+  401c64:	jne	17 <__softboundcets_memcopy_check+0x57>
+  401c66:	movq	48(%rsp), %rax
+  401c6b:	movq	40(%rsp), %rcx
+  401c70:	cmpq	%rcx, (%rax)
+  401c73:	jne	2 <__softboundcets_memcopy_check+0x57>
+  401c75:	popq	%rax
+  401c76:	retq
+  401c77:	callq	-2300 <__softboundcets_abort>
+  401c7c:	nopl	(%rax)
+
+__softboundcets_memset_check:
+  401c80:	pushq	%rax
+  401c81:	movabsq	$9223372036854775807, %rax
+  401c8b:	cmpq	%rax, %rsi
+  401c8e:	jae	28 <__softboundcets_memset_check+0x2C>
+  401c90:	cmpq	%rdx, %rdi
+  401c93:	jb	23 <__softboundcets_memset_check+0x2C>
+  401c95:	movq	%rcx, %rax
+  401c98:	subq	%rsi, %rax
+  401c9b:	cmpq	%rdi, %rax
+  401c9e:	jb	12 <__softboundcets_memset_check+0x2C>
+  401ca0:	cmpq	%rsi, %rcx
+  401ca3:	jb	7 <__softboundcets_memset_check+0x2C>
+  401ca5:	cmpq	%r8, (%r9)
+  401ca8:	jne	2 <__softboundcets_memset_check+0x2C>
+  401caa:	popq	%rax
+  401cab:	retq
+  401cac:	callq	-2353 <__softboundcets_abort>
+  401cb1:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_metadata_store:
+  401cc0:	pushq	%rbp
+  401cc1:	pushq	%r15
+  401cc3:	pushq	%r14
+  401cc5:	pushq	%r13
+  401cc7:	pushq	%r12
+  401cc9:	pushq	%rbx
+  401cca:	pushq	%rax
+  401ccb:	movq	%r8, %r14
+  401cce:	movq	%rcx, %r15
+  401cd1:	movq	%rdx, %r12
+  401cd4:	movq	%rsi, %r13
+  401cd7:	movq	%rdi, %rbx
+  401cda:	movq	%rbx, %rbp
+  401cdd:	shrq	$25, %rbp
+  401ce1:	movq	13328(%rip), %rax
+  401ce8:	movq	(%rax,%rbp,8), %rax
+  401cec:	testq	%rax, %rax
+  401cef:	jne	50 <__softboundcets_metadata_store+0x63>
+  401cf1:	movl	$0, %edi
+  401cf6:	movl	$134217728, %esi
+  401cfb:	movl	$3, %edx
+  401d00:	movl	$16418, %ecx
+  401d05:	movl	$4294967295, %r8d
+  401d0b:	xorl	%r9d, %r9d
+  401d0e:	callq	-5251
+  401d13:	testq	%rax, %rax
+  401d16:	movq	13275(%rip), %rcx
+  401d1d:	movq	%rax, (%rcx,%rbp,8)
+  401d21:	je	41 <__softboundcets_metadata_store+0x8C>
+  401d23:	andq	$33554424, %rbx
+  401d2a:	movq	%r13, (%rax,%rbx,4)
+  401d2e:	movq	%r12, 8(%rax,%rbx,4)
+  401d33:	movq	%r15, 16(%rax,%rbx,4)
+  401d38:	movq	%r14, 24(%rax,%rbx,4)
+  401d3d:	addq	$8, %rsp
+  401d41:	popq	%rbx
+  401d42:	popq	%r12
+  401d44:	popq	%r13
+  401d46:	popq	%r14
+  401d48:	popq	%r15
+  401d4a:	popq	%rbp
+  401d4b:	retq
+  401d4c:	movl	$4204020, %edi
+  401d51:	movl	$4203248, %esi
+  401d56:	movl	$778, %edx
+  401d5b:	movl	$4204055, %ecx
+  401d60:	callq	-5317
+  401d65:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_metadata_map:
+  401d70:	movq	%rdi, %rcx
+  401d73:	shrq	$25, %rcx
+  401d77:	movq	13178(%rip), %rdx
+  401d7e:	leaq	(,%rdi,4), %rax
+  401d86:	andq	$134217696, %rax
+  401d8c:	addq	(%rdx,%rcx,8), %rax
+  401d90:	retq
+  401d91:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_metadata_load_base:
+  401da0:	movq	(%rdi), %rax
+  401da3:	retq
+  401da4:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_metadata_load_bound:
+  401db0:	movq	8(%rdi), %rax
+  401db4:	retq
+  401db5:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_metadata_load_key:
+  401dc0:	movq	16(%rdi), %rax
+  401dc4:	retq
+  401dc5:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_metadata_load_lock:
+  401dd0:	movq	24(%rdi), %rax
+  401dd4:	retq
+  401dd5:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_metadata_load:
+  401de0:	movq	%rdi, %r9
+  401de3:	shrq	$25, %r9
+  401de7:	movq	13066(%rip), %rax
+  401dee:	movq	(%rax,%r9,8), %r9
+  401df2:	testq	%r9, %r9
+  401df5:	je	39 <__softboundcets_metadata_load+0x3E>
+  401df7:	andq	$33554424, %rdi
+  401dfe:	movq	(%r9,%rdi,4), %rax
+  401e02:	movq	%rax, (%rsi)
+  401e05:	movq	8(%r9,%rdi,4), %rax
+  401e0a:	movq	%rax, (%rdx)
+  401e0d:	movq	16(%r9,%rdi,4), %rax
+  401e12:	movq	%rax, (%rcx)
+  401e15:	movq	24(%r9,%rdi,4), %rax
+  401e1a:	movq	%rax, (%r8)
+  401e1d:	retq
+  401e1e:	movq	$0, (%rsi)
+  401e25:	movq	$0, (%rdx)
+  401e2c:	movq	$0, (%rcx)
+  401e33:	xorl	%eax, %eax
+  401e35:	movq	%rax, (%r8)
+  401e38:	retq
+  401e39:	nopl	(%rax)
+
+__softboundcets_temporal_load_dereference_check:
+  401e40:	pushq	%rax
+  401e41:	movq	(%rdi), %rcx
+  401e44:	cmpq	%rsi, %rcx
+  401e47:	jne	2 <__softboundcets_temporal_load_dereference_check+0xB>
+  401e49:	popq	%rax
+  401e4a:	retq
+  401e4b:	movq	12894(%rip), %r8
+  401e52:	movl	$4204131, %edi
+  401e57:	xorl	%eax, %eax
+  401e59:	movq	%rcx, %rdx
+  401e5c:	movq	%r8, %rcx
+  401e5f:	callq	-2964 <__softboundcets_printf>
+  401e64:	callq	-2793 <__softboundcets_abort>
+  401e69:	nopl	(%rax)
+
+__softboundcets_temporal_store_dereference_check:
+  401e70:	pushq	%rax
+  401e71:	movq	(%rdi), %rcx
+  401e74:	cmpq	%rsi, %rcx
+  401e77:	jne	2 <__softboundcets_temporal_store_dereference_check+0xB>
+  401e79:	popq	%rax
+  401e7a:	retq
+  401e7b:	movl	$4204188, %edi
+  401e80:	xorl	%eax, %eax
+  401e82:	movq	%rcx, %rdx
+  401e85:	callq	-3002 <__softboundcets_printf>
+  401e8a:	callq	-2831 <__softboundcets_abort>
+  401e8f:	nop
+
+__softboundcets_stack_memory_deallocation:
+  401e90:	movq	12833(%rip), %rax
+  401e97:	leaq	-8(%rax), %rcx
+  401e9b:	movq	%rcx, 12822(%rip)
+  401ea2:	movq	$0, -8(%rax)
+  401eaa:	retq
+  401eab:	nopl	(%rax,%rax)
+
+__softboundcets_memory_deallocation:
+  401eb0:	movq	$0, (%rdi)
+  401eb7:	movq	12786(%rip), %rax
+  401ebe:	movq	%rax, (%rdi)
+  401ec1:	movq	%rdi, 12776(%rip)
+  401ec8:	retq
+  401ec9:	nopl	(%rax)
+
+__softboundcets_allocate_lock_location:
+  401ed0:	movq	12761(%rip), %rax
+  401ed7:	testq	%rax, %rax
+  401eda:	je	11 <__softboundcets_allocate_lock_location+0x17>
+  401edc:	movq	(%rax), %rcx
+  401edf:	movq	%rcx, 12746(%rip)
+  401ee6:	retq
+  401ee7:	movq	12754(%rip), %rax
+  401eee:	leaq	8(%rax), %rcx
+  401ef2:	movq	%rcx, 12743(%rip)
+  401ef9:	retq
+  401efa:	nopw	(%rax,%rax)
+
+__softboundcets_allocation_secondary_trie_allocate_range:
+  401f00:	retq
+  401f01:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_allocation_secondary_trie_allocate:
+  401f10:	retq
+  401f11:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_stack_memory_allocation:
+  401f20:	movq	12657(%rip), %rax
+  401f27:	leaq	1(%rax), %rcx
+  401f2b:	movq	%rcx, 12646(%rip)
+  401f32:	movq	12671(%rip), %rcx
+  401f39:	leaq	8(%rcx), %rdx
+  401f3d:	movq	%rdx, 12660(%rip)
+  401f44:	movq	%rcx, (%rdi)
+  401f47:	movq	%rax, (%rsi)
+  401f4a:	movq	(%rdi), %rcx
+  401f4d:	movq	%rax, (%rcx)
+  401f50:	retq
+  401f51:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_memory_allocation:
+  401f60:	pushq	%rax
+  401f61:	movq	12592(%rip), %r9
+  401f68:	leaq	1(%r9), %rax
+  401f6c:	movq	%rax, 12581(%rip)
+  401f73:	movq	12598(%rip), %r8
+  401f7a:	testq	%r8, %r8
+  401f7d:	je	12 <__softboundcets_memory_allocation+0x2B>
+  401f7f:	movq	(%r8), %rcx
+  401f82:	movq	%rcx, 12583(%rip)
+  401f89:	jmp	18 <__softboundcets_memory_allocation+0x3D>
+  401f8b:	movq	12590(%rip), %r8
+  401f92:	leaq	8(%r8), %rcx
+  401f96:	movq	%rcx, 12579(%rip)
+  401f9d:	movq	%r8, (%rsi)
+  401fa0:	movq	%r9, (%rdx)
+  401fa3:	movq	(%rsi), %rcx
+  401fa6:	movq	%r9, (%rcx)
+  401fa9:	testq	%rdi, %rdi
+  401fac:	je	82 <__softboundcets_memory_allocation+0xA0>
+  401fae:	andq	$33554431, %r9
+  401fb5:	movq	12564(%rip), %rdx
+  401fbc:	testq	$-3, (%rdx,%r9,8)
+  401fc4:	je	49 <__softboundcets_memory_allocation+0x97>
+  401fc6:	xorl	%ecx, %ecx
+  401fc8:	nopl	(%rax,%rax)
+  401fd0:	cmpq	$33554432, %rcx
+  401fd7:	jae	64 <__softboundcets_memory_allocation+0xB9>
+  401fd9:	leal	(%rax,%rcx), %esi
+  401fdc:	leaq	1(%rcx), %rcx
+  401fe0:	andq	$33554431, %rsi
+  401fe7:	testq	$-3, (%rdx,%rsi,8)
+  401fef:	jne	-33 <__softboundcets_memory_allocation+0x70>
+  401ff1:	leaq	(%rdx,%rsi,8), %rax
+  401ff5:	jmp	4 <__softboundcets_memory_allocation+0x9B>
+  401ff7:	leaq	(%rdx,%r9,8), %rax
+  401ffb:	movq	%rdi, (%rax)
+  401ffe:	popq	%rax
+  401fff:	retq
+  402000:	movl	$4204231, %edi
+  402005:	movl	$4203248, %esi
+  40200a:	movl	$1219, %edx
+  40200f:	movl	$4204248, %ecx
+  402014:	callq	-6009
+  402019:	callq	-3230 <__softboundcets_abort>
+  40201e:	nop
+
+__softboundcets_add_to_free_map:
+  402020:	pushq	%rax
+  402021:	testq	%rsi, %rsi
+  402024:	je	90 <__softboundcets_add_to_free_map+0x60>
+  402026:	movq	%rdi, %rcx
+  402029:	andq	$33554431, %rcx
+  402030:	movq	12441(%rip), %rax
+  402037:	testq	$-3, (%rax,%rcx,8)
+  40203f:	je	54 <__softboundcets_add_to_free_map+0x57>
+  402041:	incq	%rdi
+  402044:	xorl	%ecx, %ecx
+  402046:	nopw	%cs:(%rax,%rax)
+  402050:	cmpq	$33554432, %rcx
+  402057:	jae	64 <__softboundcets_add_to_free_map+0x79>
+  402059:	leal	(%rdi,%rcx), %edx
+  40205c:	leaq	1(%rcx), %rcx
+  402060:	andq	$33554431, %rdx
+  402067:	testq	$-3, (%rax,%rdx,8)
+  40206f:	jne	-33 <__softboundcets_add_to_free_map+0x30>
+  402071:	leaq	(%rax,%rdx,8), %rax
+  402075:	jmp	4 <__softboundcets_add_to_free_map+0x5B>
+  402077:	leaq	(%rax,%rcx,8), %rax
+  40207b:	movq	%rsi, (%rax)
+  40207e:	popq	%rax
+  40207f:	retq
+  402080:	movl	$4204231, %edi
+  402085:	movl	$4203248, %esi
+  40208a:	movl	$1219, %edx
+  40208f:	movl	$4204248, %ecx
+  402094:	callq	-6137
+  402099:	callq	-3358 <__softboundcets_abort>
+  40209e:	nop
+
+__softboundcets_get_global_lock:
+  4020a0:	movq	12321(%rip), %rax
+  4020a7:	retq
+  4020a8:	nopl	(%rax,%rax)
+
+__softboundcets_check_remove_from_free_map:
+  4020b0:	pushq	%rax
+  4020b1:	movq	%rdi, %rax
+  4020b4:	andq	$33554431, %rax
+  4020ba:	movq	12303(%rip), %r8
+  4020c1:	movq	(%r8,%rax,8), %rdx
+  4020c5:	testq	%rdx, %rdx
+  4020c8:	je	63 <__softboundcets_check_remove_from_free_map+0x59>
+  4020ca:	leaq	(%r8,%rax,8), %rax
+  4020ce:	incq	%rdi
+  4020d1:	xorl	%ecx, %ecx
+  4020d3:	nopw	%cs:(%rax,%rax)
+  4020e0:	cmpq	%rsi, %rdx
+  4020e3:	je	41 <__softboundcets_check_remove_from_free_map+0x5E>
+  4020e5:	cmpq	$33554432, %rcx
+  4020ec:	jae	27 <__softboundcets_check_remove_from_free_map+0x59>
+  4020ee:	leal	(%rdi,%rcx), %edx
+  4020f1:	leaq	1(%rcx), %rcx
+  4020f5:	andq	$33554431, %rdx
+  4020fc:	leaq	(%r8,%rdx,8), %rax
+  402100:	movq	(%r8,%rdx,8), %rdx
+  402104:	testq	%rdx, %rdx
+  402107:	jne	-41 <__softboundcets_check_remove_from_free_map+0x30>
+  402109:	callq	-3470 <__softboundcets_abort>
+  40210e:	movq	$2, (%rax)
+  402115:	popq	%rax
+  402116:	retq
+  402117:	nopw	(%rax,%rax)
+
+__softboundcets_metadata_load_vector:
+  402120:	shll	$3, %r9d
+  402124:	movslq	%r9d, %rax
+  402127:	addq	%rdi, %rax
+  40212a:	movq	%rax, %r9
+  40212d:	shrq	$25, %r9
+  402131:	movq	12224(%rip), %rdi
+  402138:	movq	(%rdi,%r9,8), %r9
+  40213c:	testq	%r9, %r9
+  40213f:	je	38 <__softboundcets_metadata_load_vector+0x47>
+  402141:	andq	$33554424, %rax
+  402147:	movq	(%r9,%rax,4), %rdi
+  40214b:	movq	%rdi, (%rsi)
+  40214e:	movq	8(%r9,%rax,4), %rsi
+  402153:	movq	%rsi, (%rdx)
+  402156:	movq	16(%r9,%rax,4), %rdx
+  40215b:	movq	%rdx, (%rcx)
+  40215e:	movq	24(%r9,%rax,4), %rax
+  402163:	movq	%rax, (%r8)
+  402166:	retq
+  402167:	movq	$0, (%rsi)
+  40216e:	movq	$0, (%rdx)
+  402175:	movq	$0, (%rcx)
+  40217c:	xorl	%eax, %eax
+  40217e:	movq	%rax, (%r8)
+  402181:	retq
+  402182:	nopw	%cs:(%rax,%rax)
+
+__softboundcets_metadata_store_vector:
+  402190:	pushq	%rbp
+  402191:	pushq	%r15
+  402193:	pushq	%r14
+  402195:	pushq	%r13
+  402197:	pushq	%r12
+  402199:	pushq	%rbx
+  40219a:	pushq	%rax
+  40219b:	movq	%r8, %r14
+  40219e:	movq	%rcx, %r15
+  4021a1:	movq	%rdx, %r12
+  4021a4:	movq	%rsi, %r13
+  4021a7:	shll	$3, %r9d
+  4021ab:	movslq	%r9d, %rbx
+  4021ae:	addq	%rdi, %rbx
+  4021b1:	movq	%rbx, %rbp
+  4021b4:	shrq	$25, %rbp
+  4021b8:	movq	12089(%rip), %rax
+  4021bf:	movq	(%rax,%rbp,8), %rax
+  4021c3:	testq	%rax, %rax
+  4021c6:	jne	50 <__softboundcets_metadata_store_vector+0x6A>
+  4021c8:	movl	$0, %edi
+  4021cd:	movl	$134217728, %esi
+  4021d2:	movl	$3, %edx
+  4021d7:	movl	$16418, %ecx
+  4021dc:	movl	$4294967295, %r8d
+  4021e2:	xorl	%r9d, %r9d
+  4021e5:	callq	-6490
+  4021ea:	testq	%rax, %rax
+  4021ed:	movq	12036(%rip), %rcx
+  4021f4:	movq	%rax, (%rcx,%rbp,8)
+  4021f8:	je	41 <__softboundcets_metadata_store_vector+0x93>
+  4021fa:	andq	$33554424, %rbx
+  402201:	movq	%r13, (%rax,%rbx,4)
+  402205:	movq	%r12, 8(%rax,%rbx,4)
+  40220a:	movq	%r15, 16(%rax,%rbx,4)
+  40220f:	movq	%r14, 24(%rax,%rbx,4)
+  402214:	addq	$8, %rsp
+  402218:	popq	%rbx
+  402219:	popq	%r12
+  40221b:	popq	%r13
+  40221d:	popq	%r14
+  40221f:	popq	%r15
+  402221:	popq	%rbp
+  402222:	retq
+  402223:	movl	$4204020, %edi
+  402228:	movl	$4203248, %esi
+  40222d:	movl	$778, %edx
+  402232:	movl	$4204055, %ecx
+  402237:	callq	-6556
+  40223c:	nopl	(%rax)
+
+__libc_csu_init:
+  402240:	movq	%rbp, -40(%rsp)
+  402245:	movq	%r12, -32(%rsp)
+  40224a:	leaq	11167(%rip), %rbp
+  402251:	leaq	11136(%rip), %r12
+  402258:	movq	%r13, -24(%rsp)
+  40225d:	movq	%r14, -16(%rsp)
+  402262:	movq	%r15, -8(%rsp)
+  402267:	movq	%rbx, -48(%rsp)
+  40226c:	subq	$56, %rsp
+  402270:	subq	%r12, %rbp
+  402273:	movl	%edi, %r13d
+  402276:	movq	%rsi, %r14
+  402279:	sarq	$3, %rbp
+  40227d:	movq	%rdx, %r15
+  402280:	callq	-6693 <_init>
+  402285:	testq	%rbp, %rbp
+  402288:	je	28 <__libc_csu_init+0x66>
+  40228a:	xorl	%ebx, %ebx
+  40228c:	nopl	(%rax)
+  402290:	movq	%r15, %rdx
+  402293:	movq	%r14, %rsi
+  402296:	movl	%r13d, %edi
+  402299:	callq	*(%r12,%rbx,8)
+  40229d:	addq	$1, %rbx
+  4022a1:	cmpq	%rbp, %rbx
+  4022a4:	jne	-22 <__libc_csu_init+0x50>
+  4022a6:	movq	8(%rsp), %rbx
+  4022ab:	movq	16(%rsp), %rbp
+  4022b0:	movq	24(%rsp), %r12
+  4022b5:	movq	32(%rsp), %r13
+  4022ba:	movq	40(%rsp), %r14
+  4022bf:	movq	48(%rsp), %r15
+  4022c4:	addq	$56, %rsp
+  4022c8:	retq
+  4022c9:	nopl	(%rax)
+
+__libc_csu_fini:
+  4022d0:	rep
+  4022d1:	retq
+  4022d2:	nop

@@ -1,48 +1,106 @@
+#ifndef PARSER_HPP
+#define PARSER_HPP
+
+#include "lexer.hpp"
+#include <unordered_map>
+#include <map>
+#include <functional>
+#include <cstring>
+
 /*
 Author: hedenc@kth.se
 Free to use and modify non commercially as long as this notice remains
 */
 
-#ifndef PARSER_HPP
-#define PARSER_HPP
+namespace binmark {
 
-#include "lexer.hpp"
+struct fline {
+    std::string fname_;
+    uint64_t lineno_;
 
-#include <initializer_list>
+    uint64_t addr_;
 
-namespace rtboundsmark {
+    fline(): fname_("???"), lineno_(0){};
+    fline(const char *fname, uint64_t lineno):
+        fname_(fname), lineno_(lineno) {};
+
+    bool operator<(const fline &other) const {
+        return (fname_ != other.fname_) ?
+            fname_ < other.fname_: lineno_ < other.lineno_;
+    }
+};
+
 
 /*
 Parser
 parse() to parse
 */
+
+struct str_cmp {
+    bool operator()(const char *s1, const char *s2) const
+    {
+        return !strcmp(s1, s2);
+    };
+};
+
+
 class parser {
+
+
     lexer lex_;
 
-    token ctok_; // Current token
+    token ctok_;
 
-    bool parse_call();
+    void parse_addr(std::multimap<fline, std::string> &ast);
+    void parse_lineinfo();
 
-    bool parse_bang();
+    const static std::unordered_map<std::string, const char * > funcs_;
 
+    fline cline_;
 
-    bool expects(std::initializer_list<token> toks);
+    template <token... tok>
+    struct helper {
+        static constexpr bool expect(parser &);
+    };
 
-    bool eat_until(std::initializer_list<token> until);
+    template <token... tok_e>
+    friend struct helper;
+
+    template <token... tok>
+    constexpr bool expects() {
+        return helper<tok...>::expect(*this);
+    }
 
 public:
     /*
-    Constructs parser for file with name 'fname'
+    Constructs parser for opened file 'file'
     */
-    parser(const char *fname): 
-        lex_(fname), ctok_(eof) 
+    parser(FILE *file):
+        lex_(file), ctok_(eof), cline_()
     {};
 
-    // Parses file and output marking info to stdout
-    void parse();
+    // Parses up till next call node found, sets 'nxtnode' to that
+    void parse(std::multimap<fline, std::string> &ast);
 
+};
+
+template <>
+struct parser::helper<> {
+    static constexpr bool expect(parser &p) {
+        return true;
+    }
+};
+
+template <token head, token... tail>
+struct parser::helper<head, tail...> {
+    static constexpr bool expect(parser &p) {
+        p.ctok_ = p.lex_.next_tok();
+        if (p.ctok_ != head)
+            return false;
+        return helper<tail...>::expect(p);
+    }
 };
 
 } /* namespace */
 
-#endif
+#endif // PARSER_HPP
