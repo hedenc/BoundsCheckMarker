@@ -5,7 +5,20 @@ SOFTBOUND_LIB = 'home/hedenc/softboundcets-34-master/softboundcets-lib'
 
 CXXFLAGS = -std=c++14 -O3 -Wall -pedantic
 
-all: marker Tests/test-output.txt
+COREUTILS_DIR = ./Tests/coreutils-8.27/src
+
+BINFILES = $(filter-out \
+	$(wildcard $(COREUTILS_DIR)/*.*) \
+	$(shell find $(COREUTILS_DIR)/ -maxdepth 1 -type d) \
+	$(COREUTILS_DIR)/dcgen \
+	$(COREUTILS_DIR)/extract-magic \
+	, \
+	$(wildcard ./Tests/coreutils-8.27/src/*))
+
+tests: marker $(BINFILES) Tests/test-output.txt
+	$(foreach FILE, $(BINFILES), ./marker $(FILE) > $(FILE)-output.txt; )
+
+all: marker tests
 
 marker: marker.o lexer.o parser.o
 	$(CXX) $(CXXFLAGS) -o marker marker.o lexer.o parser.o
