@@ -4,6 +4,8 @@ It marks the lines which Softbound+CETS inserts runtime bounds checks.
 
 Compile: make marker
 
+Compiler equirements: C++14 supporting compiler
+
 Invocation: ./marker BINARY_FILE
 
 The runtime bounds checker depends on line-info in the binaries, and currently can't track inlined instances of the runtime checks. So to compile binaries using Softbound+CETS that this tool supports it has to be compile without link-time-optimization and with debug line info.
