@@ -1,6 +1,6 @@
 A runtime bounds checks marker for Softbound+CETS
 
-It marks the lines which Softbound+CETS inserts runtime checks.
+It marks the lines which Softbound+CETS inserts runtime bounds checks.
 
 Compile: make marker
 
