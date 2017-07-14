@@ -8,7 +8,7 @@ Free to use and modify non commercially as long as this notice remains
 
 namespace binmark {
 
-const std::unordered_map<std::string, token> lexer::keywords_ = {
+decltype(lexer::keywords_) lexer::keywords_ = {
     {"", eof}
 #define X(str, sym) ,{ #str, sym}
 #include "keywords.def"
@@ -24,6 +24,7 @@ void lexer::read()
     }
 }
 
+// Called upon match on "/"
 token lexer::state_slash()
 {
     do {
@@ -43,23 +44,21 @@ token lexer::state_slash()
     } while (true);
 }
 
+// Called upon match on [a-zA-Z_] 
 token lexer::state_alpha()
 {
 
     do {
         read();
         switch (head_) {
-#define X(symbol) case symbol:
-#include "gzGZ_.def"
-#include "afAF.def"
-X('0')
-#include "19.def"
-#undef X
+        case 'a' ... 'z':
+        case 'A' ... 'Z':
+        case '0' ... '9':
+        case '_':
             val_ += head_,
             eat();
             break;
         default:
-            //printf("%d strval() = %s\n", other, val_.c_str());
             auto search = keywords_.find(val_);
             return (search != keywords_.end()) ? search->second : id;
         }
@@ -94,16 +93,13 @@ token lexer::next_tok()
             val_ = head_;
             eat();
             return state_zero();
-#define X(number) case number:
-#include "19.def"
-#undef X
+        case '1' ... '9':
             val_ = head_;
             eat();
             return state_num();
-#define X(letter) case letter:
-#include "afAF.def"
-#include "gzGZ_.def"
-#undef X
+        case 'a' ... 'z':
+        case 'A' ... 'Z':
+        case '_':
             val_ = head_;
             eat();
             return state_alpha();
@@ -119,16 +115,15 @@ token lexer::next_tok()
     } while (1);
 }
 
+// Called upon match of  [1-9] | ( "0" ( [0-9a-fA-F] | "x" ) )
 token lexer::state_num()
 {
     do {
         read();
         switch (head_) {
-#define X(num) case num:
-X('0')
-#include "19.def"
-#include "afAF.def"
-#undef X
+        case '0' ... '9':
+        case 'a' ... 'z':
+        case 'A' ... 'Z':
             val_ += head_;
             eat();
             break;
@@ -141,15 +136,14 @@ X('0')
     } while (true);
 }
 
+// Called upon match on "0"
 token lexer::state_zero()
 {
     read();
     switch (head_) {
-#define X(num) case num:
-X('0')
-#include "19.def"
-#include "afAF.def"
-#undef X
+    case '0' ... '9':
+    case 'a' ... 'f':
+    case 'A' ... 'F':
         val_ += head_;
         eat();
         return state_num();
@@ -163,6 +157,7 @@ X('0')
     }
 }
 
+// Match -
 token lexer::state_minus()
 {
     read();
@@ -171,10 +166,9 @@ token lexer::state_minus()
         val_ += head_;
         eat();
         return state_zero();
-#define X(num) case num:
-#include "19.def"
-#include "afAF.def"
-#undef X
+    case '1' ... '9':
+    case 'a' ... 'f':
+    case 'A' ... 'F':
         val_ += head_;
         eat();
         return state_num();
@@ -191,19 +185,19 @@ void lexer::print()
         ctok = next_tok();
         switch (ctok){
         case lineinfo:
-            printf("lineinfo[%s]\n", strval());
+            printf("lineinfo[%s]\n", val_.c_str());
             break;
         case other:
-            printf("other[%s]\n", strval());
+            printf("other[%s]\n", val_.c_str());
             break;
         case addr:
             printf("addr[%" PRIx64 "]\n", hexval());
             break;
         case id:
-            printf("id[%s]\n", strval());
+            printf("id[%s]\n", val_.c_str());
             break;
         case num:
-            printf("num[%s]\n", strval());
+            printf("num[%s]\n", val_.c_str());
             break;
 
 /*
@@ -215,10 +209,16 @@ Generates blocks for each token with following code
 X(eof)
 X(langle)
 X(rangle)
+X(callq)
+X(jump)
+X(ret)
+X(jmp)
 #undef X
+/*
 #define X(str, sym) case sym: printf(# sym "\n"); break;
 #include "keywords.def"
 #undef X
+*/
         }
     } while (ctok != eof);
 }

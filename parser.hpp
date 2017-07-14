@@ -2,62 +2,58 @@
 #define PARSER_HPP
 
 #include "lexer.hpp"
+#include "code_block.hpp"
+
 #include <unordered_map>
+#include <vector>
 #include <map>
-#include <functional>
-#include <cstring>
+#include <unordered_set>
+#include <map>
+#include <set>
+#include <array>
+
 
 /*
 Author: hedenc@kth.se
 Free to use and modify non commercially as long as this notice remains
 */
 
+#ifdef __APPLE__
+#define RELJMPADDRS
+#endif
+
 namespace binmark {
 
-struct fline {
-    std::string fname_;
-    uint64_t lineno_;
-
-    uint64_t addr_;
-
-    fline(): fname_("???"), lineno_(0){};
-    fline(const char *fname, uint64_t lineno):
-        fname_(fname), lineno_(lineno) {};
-
-    bool operator<(const fline &other) const {
-        return (fname_ != other.fname_) ?
-            fname_ < other.fname_: lineno_ < other.lineno_;
-    }
-};
-
+using std::vector;
+using std::map;
+using std::string;
+using std::array;
+using std::set;
+using std::unordered_set;
+using std::unordered_map;
 
 /*
 Parser
 parse() to parse
 */
 
-struct str_cmp {
-    bool operator()(const char *s1, const char *s2) const
-    {
-        return !strcmp(s1, s2);
-    };
+class ast: public map<
+    string, // filename
+    map< 
+        uint64_t, // Line number
+        array< set< uint64_t >, 0 + // Addresses
+#define X(KINDNUM, FNAME, DESC, FROM, TO) + 2
+#include "functions.def"
+#undef X
+        >
+    >
+> {
+public:
+    void print() const;
 };
 
 
 class parser {
-
-
-    lexer lex_;
-
-    token ctok_;
-
-    void parse_addr(std::multimap<fline, std::string> &ast);
-    void parse_lineinfo();
-
-    const static std::unordered_map<std::string, const char * > funcs_;
-
-    fline cline_;
-
     template <token... tok>
     struct helper {
         static constexpr bool expect(parser &);
@@ -66,21 +62,57 @@ class parser {
     template <token... tok_e>
     friend struct helper;
 
+    lexer lex_;
+
+    token ctok_;
+    bool ctok_set_;
+
+    size_t calls_;
+
+
+#ifdef RELJMPADDRS
+    int64_t jump_offset_;
+#endif
+
+    map<uint64_t, unordered_set<uint64_t> > split_block_addr_;
+
+    const static unordered_map<string, uint64_t> funcs_;
+
+    linedata curr_line_;
+    bool after_ret_;
+
+    void eat()
+    {
+        ctok_set_ = false;
+    }
+
     template <token... tok>
     constexpr bool expects() {
         return helper<tok...>::expect(*this);
     }
+
+    void parse_addr(ast &tree, vector<code_block> &block);
+    void parse_lineinfo();
+    void read();
+    void handle_jump(vector<code_block> &blocks, uint64_t instr, uint64_t split_addr, code_block &from);
+
+
 
 public:
     /*
     Constructs parser for opened file 'file'
     */
     parser(FILE *file):
-        lex_(file), ctok_(eof), cline_()
+        lex_(file), ctok_(eof), ctok_set_(false), calls_(0), 
+#ifdef __APPLE__
+        jump_offset_(0), 
+#endif
+        curr_line_("???", 0), after_ret_(false)
     {};
 
     // Parses up till next call node found, sets 'nxtnode' to that
-    void parse(std::multimap<fline, std::string> &ast);
+    void parse(ast &tree, vector<code_block> &blocks);
+    //void print() const;
 
 };
 
@@ -94,9 +126,10 @@ struct parser::helper<> {
 template <token head, token... tail>
 struct parser::helper<head, tail...> {
     static constexpr bool expect(parser &p) {
-        p.ctok_ = p.lex_.next_tok();
+        p.read();
         if (p.ctok_ != head)
             return false;
+        p.eat();
         return helper<tail...>::expect(p);
     }
 };

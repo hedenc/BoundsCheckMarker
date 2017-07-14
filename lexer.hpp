@@ -10,11 +10,11 @@ Free to use and modify non commercially as long as this notice remains
 
 namespace binmark {
 
+using std::unordered_map;
+using std::string;
+
 enum token {
-    other, eof, lineinfo, addr, id, langle, rangle, num
-#define X(str, sym) ,sym
-#include "keywords.def"
-#undef X
+    other, eof, lineinfo, addr, id, langle, rangle, num, callq, jump, ret, jmp
 };
 
 class lexer {
@@ -24,17 +24,14 @@ class lexer {
 
     std::string val_;
 
-    const static std::unordered_map<std::string, token> keywords_;
-
-    void read();
+    const static unordered_map<string, token> keywords_;
     
     void eat()              // Eats character in 'head_'
     {
         head_set_ = false;
     }
 
-
-
+    void read();
     token state_slash();
     token state_alpha();
    
@@ -51,10 +48,12 @@ public:
     {}
 
     // Returns token data for tokens that use string token data
-    const char *strval() const
+    
+    const std::string &strval() const
     {
-        return val_.c_str();
+        return val_;
     }
+    
 
     // Returns token data for tokens that use integer token data
     int64_t intval() const

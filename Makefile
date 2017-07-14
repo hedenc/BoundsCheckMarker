@@ -1,45 +1,42 @@
 
-SOFTBOUND_CC = clang
-SOFTBOUND_FLAGS = -fsoftboundcets -lm -lrt -g
-SOFTBOUND_LIB = 'home/hedenc/softboundcets-34-master/softboundcets-lib'
+SOFTBOUND_CC = clang 
+SOFTBOUND_FLAGS = -fsoftboundcets -lm -lrt -g -flto -O3 
+SOFTBOUND_LIB = 'home/hedenc/softboundcets-34-master/softboundcets-lib/lto'
 
-CXXFLAGS = -std=c++14 -O3 -Wall -pedantic
+CXXFLAGS = -std=c++14 -O3 -Wall -pedantic -Wno-gnu-case-range
 
-COREUTILS_DIR = ./Tests/coreutils-8.27/src
+COREUTILS_DIR = ./Tests/coreutils-lto/src
 
 BINFILES = $(filter-out \
 	$(wildcard $(COREUTILS_DIR)/*.*) \
-	$(shell find $(COREUTILS_DIR)/ -maxdepth 1 -type d) \
+	$(COREUTILS_DIR)/blake2 \
 	$(COREUTILS_DIR)/dcgen \
 	$(COREUTILS_DIR)/extract-magic \
 	, \
-	$(wildcard ./Tests/coreutils-8.27/src/*))
+	$(wildcard $(COREUTILS_DIR)/*))
 
-tests: marker $(BINFILES) Tests/test-output.txt
+tests: marker Tests/test-output.txt
 	$(foreach FILE, $(BINFILES), ./marker $(FILE) > $(FILE)-output.txt; )
 
 all: marker tests
 
-marker: marker.o lexer.o parser.o
-	$(CXX) $(CXXFLAGS) -o marker marker.o lexer.o parser.o
+marker: marker.o lexer.o parser.o code_block.o analyser.o
+	$(CXX) $(CXXFLAGS) -o marker marker.o lexer.o parser.o code_block.o analyser.o
 
-marker.o: marker.cpp parser.hpp
+marker.o: marker.cpp analyser.hpp
 	$(CXX) -c $(CXXFLAGS) -o marker.o marker.cpp
 
-lexer.o: lexer.cpp lexer.hpp afAF.def keywords.def 19.def gzGZ_.def
+analyser.o: analyser.cpp parser.hpp analyser.hpp
+	$(CXX) -c $(CXXFLAGS) -o analyser.o analyser.cpp
+
+lexer.o: lexer.cpp lexer.hpp keywords.def
 	$(CXX) -c $(CXXFLAGS) -o lexer.o lexer.cpp
 
-gzGZ_.def: gzGZ_.py
-	python3 gzGZ_.py > gzGZ_.def
-
-afAF.def: afAF.py
-	python3 afAF.py > afAF.def
-
-19.def: 19.py
-	python3 19.py > 19.def
-
-parser.o: parser.cpp lexer.hpp functions.def
+parser.o: parser.cpp lexer.hpp functions.def code_block.hpp
 	$(CXX) -c $(CXXFLAGS) -o parser.o parser.cpp
+
+code_block.o: code_block.cpp code_block.hpp parser.hpp
+	$(CXX) -c $(CXXFLAGS) -o code_block.o code_block.cpp
 
 Tests/test: Tests/test.c
 	$(SOFTBOUND_CC) $(SOFTBOUND_FLAGS) -L/$(SOFTBOUND_LIB) -o ./Tests/test ./Tests/test.c
@@ -51,5 +48,5 @@ clean:
 	rm -f *.o marker
 
 hard_clean: clean
-	rm -f 19.def afAF.def gzGZ.def
+	rm -f
 

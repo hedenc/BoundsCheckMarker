@@ -1,38 +1,23 @@
-#include <cstdio>
-#include "parser.hpp"
+#include "analyser.hpp"
 
-#include "unistd.h"
-
-#include <stdexcept>
-#include <string>
-#include <cstring>
-
-#include <unordered_map>
-#include <cstdlib>
-#include <map>
-#include <cinttypes>
-
-using binmark::parser;
-using binmark::fline;
-
-/*
-Author: hedenc@kth.se
-Free to use and modify non commercially as long as this notice remains
-*/
+using binmark::ast;
 
 class pipeobj {
     FILE *pipe_;
 public:
-    pipeobj(const char *cmd, const char *mode): pipe_(popen(cmd, mode)){
+    pipeobj(const char *cmd, const char *mode): pipe_(popen(cmd, mode))
+    {
         if (!pipe_) throw std::runtime_error (
             "Error trying to run \"objdump\" on given file"
         );
     }
-    ~pipeobj() {
+    ~pipeobj()
+    {
         pclose(pipe_);
     }
 
-    FILE *operator()() const {
+    FILE *operator()() const 
+    {
         return pipe_;
     }
 };
@@ -53,26 +38,11 @@ int main(int argc, char **argv)
     // Opening piped process objdump to get the assembly
     pipeobj asmdump(cmdbuff.c_str(), "r");
 
-    std::multimap<fline, std::string> ast;
+    ast tree;
 
-    parser(asmdump()).parse(ast);
+    analyse(asmdump(), tree);
 
-    const char empty[] = "";
-    const char *fname = empty;
-    uint64_t lineno = 0;
-    for (auto &it: ast) {
-        if (strcmp(fname, it.first.fname_.c_str())) {
-            fname = it.first.fname_.c_str();
-            lineno = 0;
-            printf("File %s:\n", fname);
-        }
-        if (lineno != it.first.lineno_) {
-            lineno = it.first.lineno_;
-            printf("Line %" PRIu64 ":\n", lineno);
-        }
-        printf("    %-32s%" PRIx64 "\n", it.second.c_str(), it.first.addr_);
-
-    }
+    tree.print();
 
 
     return 0;
