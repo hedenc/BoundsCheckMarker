@@ -110,7 +110,7 @@ void parser::parse_addr(ast &tree, vector<code_block> &blocks)
 #ifdef RELJMPADDRS
             jump_offset_ = lex_.intval();
 #else
-            handle_jump(blocks, instr, lex_.hexval, blocks.back());
+            handle_jump(blocks, instr, lex_.hexval(), blocks.back());
 #endif
         }
         break;
@@ -122,7 +122,7 @@ void parser::parse_addr(ast &tree, vector<code_block> &blocks)
 #ifdef RELJMPADDRS
             jump_offset_ = lex_.intval();
 #else
-            handle_jump(blocks, instr, lex_.hexval, blocks.back());
+            handle_jump(blocks, instr, lex_.hexval(), blocks.back());
 #endif
         }
         break;
