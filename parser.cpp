@@ -201,7 +201,8 @@ void ast::print() const
                 ++i;
             }
         }
-        printf("\nChecked lines: %zu\n", checked_lines);
+        printf("\n           Checked lines: %zu\n\n", checked_lines);
+        checked_lines = 0;
     }
 }
 

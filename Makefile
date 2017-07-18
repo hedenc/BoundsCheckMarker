@@ -5,18 +5,27 @@ SOFTBOUND_LIB = 'home/hedenc/softboundcets-34-master/softboundcets-lib/lto'
 
 CXXFLAGS = -std=c++14 -O3 -Wall -pedantic -Wno-gnu-case-range
 
-COREUTILS_DIR = ./Tests/coreutils-lto/src
+COREUTILS_DIR = ./Tests/coreutils-lto-O3
 
 BINFILES = $(filter-out \
-	$(wildcard $(COREUTILS_DIR)/*.*) \
-	$(COREUTILS_DIR)/blake2 \
-	$(COREUTILS_DIR)/dcgen \
-	$(COREUTILS_DIR)/extract-magic \
+	$(wildcard $(COREUTILS_DIR)/src/*.*) \
+	$(COREUTILS_DIR)/src/blake2 \
+	$(COREUTILS_DIR)/src/dcgen \
+	$(COREUTILS_DIR)/src/extract-magic \
 	, \
-	$(wildcard $(COREUTILS_DIR)/*))
+	$(wildcard $(COREUTILS_DIR)/src/*))
+
+SRCFILES = $(wildcard $(COREUTILS_DIR)/src/*.c)
+HFILES = $(wildcard $(COREUTILS_DIR)/src/*.h)
+LIBSRCFILES = $(wildcard $(COREUTILS_DIR)/lib/*.c)
+LIBHFILES = $(wildcard $(COREUTILS_DIR)/lib/*.h)
+
+up_srcfiles:
+	$(foreach FILE, $(SRCFILES) $(HFILES) $(LIBSRCFILES) $(LIBHFILES), git add -f $(FILE); )
 
 tests: marker Tests/test-output.txt
-	$(foreach FILE, $(BINFILES), ./marker $(FILE) > $(FILE)-output.txt; )
+	$(foreach FILE, $(BINFILES), ./marker $(FILE) > $(FILE)-output.txt; git add $(FILE) $(FILE)-output.txt; git add $(FILE)-output.txt; )
+
 
 all: marker tests
 
@@ -26,7 +35,7 @@ marker: marker.o lexer.o parser.o code_block.o analyser.o
 marker.o: marker.cpp analyser.hpp
 	$(CXX) -c $(CXXFLAGS) -o marker.o marker.cpp
 
-analyser.o: analyser.cpp parser.hpp analyser.hpp
+analyser.o: analyser.cpp parser.hpp analyser.hpp functions.def
 	$(CXX) -c $(CXXFLAGS) -o analyser.o analyser.cpp
 
 lexer.o: lexer.cpp lexer.hpp keywords.def
