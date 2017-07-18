@@ -2,372 +2,212 @@ Number of check calls: 0
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/./lib/c-strcaseeq.h
 Line   64  Inlined Spatial load     at 40d003 
            Inlined Spatial store    at 40d003 
-           Inlined Temporal load    at 40d003 
 Line   78  Inlined Spatial load     at 40cfe4 
            Inlined Spatial store    at 40cfe4 
-           Inlined Temporal load    at 40cfe4 
 Line   92  Inlined Spatial load     at 40cfc5 
            Inlined Spatial store    at 40cfc5 
-           Inlined Temporal load    at 40cfc5 
 Line  106  Inlined Spatial load     at 40cfa6 40d0d4 
            Inlined Spatial store    at 40cfa6 40d0d4 
-           Inlined Temporal load    at 40cfa6 40d0d4 
 Line  120  Inlined Spatial load     at 40cf87 40d0b9 
            Inlined Spatial store    at 40cf87 40d0b9 
-           Inlined Temporal load    at 40cf87 40d0b9 
 Line  134  Inlined Spatial load     at 40cf68 40d098 
            Inlined Spatial store    at 40cf68 40d098 
-           Inlined Temporal load    at 40cf68 40d098 
 Line  148  Inlined Spatial load     at 40cf43 40d077 
            Inlined Spatial store    at 40cf43 40d077 
-           Inlined Temporal load    at 40cf43 40d077 
 Line  162  Inlined Spatial load     at 40cf0d 
            Inlined Spatial store    at 40cf0d 
-           Inlined Temporal load    at 40cf0d 
 
-Checked lines: 8
+           Checked lines: 8
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/./lib/xalloc.h
 Line  108  Inlined Spatial load     at 405319 
            Inlined Spatial store    at 405319 
-           Inlined Temporal load    at 405319 
 Line  186  Inlined Spatial load     at 403af6 
            Inlined Spatial store    at 403af6 
-           Inlined Memcopy          at 403af6 
-           Inlined Temporal load    at 403af6 
-Line  206  Inlined Temporal load    at 405314 
-           Inlined Temporal store   at 405314 
 Line  207  Inlined Spatial load     at 403b30 
-           Inlined Memcopy          at 403b30 
 Line  211  Inlined Spatial load     at 403b8e 
            Inlined Spatial store    at 403b8e 
-           Inlined Memcopy          at 403b8e 
-           Inlined Temporal load    at 403b8e 
 
-Checked lines: 13
+           Checked lines: 4
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/close-stream.c
 Line   58  Inlined Spatial load     at 413d85 
            Inlined Spatial store    at 413d85 
-           Inlined Temporal load    at 413d85 
-           Inlined Temporal store   at 413d85 
 Line   60  Inlined Spatial store    at 413ded 
-           Inlined Temporal load    at 413ded 
-           Inlined Temporal store   at 413ded 
 Line   70  Inlined Spatial store    at 413f60 
-           Inlined Temporal load    at 413ed3 413ee8 413f60 
-           Inlined Temporal store   at 413f60 
 Line   78  Inlined Spatial load     at 413f76 
            Inlined Spatial store    at 413f76 
-           Inlined Temporal load    at 413f76 
-           Inlined Temporal store   at 413f76 
 
-Checked lines: 17
+           Checked lines: 4
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/closeout.c
-Line  112  Inlined Temporal load    at 4056c3 
-Line  113  Inlined Memcopy          at 4056f7 40575d 
-           Inlined Temporal load    at 4056f7 
 Line  114  Inlined Spatial load     at 40575a 
-           Inlined Memcopy          at 40575a 
 Line  117  Inlined Spatial load     at 405ccf 
 Line  119  Inlined Spatial load     at 405c6e 
-           Inlined Memcopy          at 405c6e 
 Line  122  Inlined Spatial load     at 405989 
 Line  124  Inlined Spatial load     at 4059d4 
 
-Checked lines: 24
+           Checked lines: 5
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/fclose.c
-Line   64  Inlined Temporal load    at 4140f3 
-Line   70  Inlined Temporal load    at 41412e 414162 
 Line   71  Inlined Spatial store    at 414535 
-           Inlined Temporal load    at 41452d 414535 
 Line  110  Inlined Spatial load     at 4146b2 
            Inlined Spatial store    at 4146b2 
-           Inlined Temporal load    at 4146b2 
 
-Checked lines: 28
+           Checked lines: 2
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/fflush.c
 Line  148  Inlined Spatial load     at 4142b6 4142be 
            Inlined Spatial store    at 4142b6 4142be 
-           Inlined Temporal load    at 414282 4142b6 4142be 
 
-Checked lines: 29
+           Checked lines: 1
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/fseeko.c
 Line   51  Inlined Spatial load     at 414328 41434e 41436b 414374 414390 4143a8 4143b1 
            Inlined Spatial store    at 414328 41434e 41436b 414374 414390 4143a8 4143b1 
-           Inlined Temporal load    at 414328 41434e 41436b 414374 414390 41439f 4143a8 4143b1 
 Line  127  Inlined Spatial store    at 41479d 
-           Inlined Temporal load    at 41479d 
 Line  128  Inlined Spatial store    at 4147af 4147bb 
-           Inlined Temporal load    at 4147af 4147b6 4147bb 
-Line  161  Inlined Temporal load    at 414421 
 
-Checked lines: 33
+           Checked lines: 3
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/hard-locale.c
 Line   41  Inlined Spatial load     at 4086ef 
            Inlined Spatial store    at 4086ef 
-           Inlined Temporal load    at 4086ef 
 Line   43  Inlined Spatial load     at 408744 
            Inlined Spatial store    at 408744 
-           Inlined Temporal load    at 408744 
-           Inlined Temporal store   at 408744 
 Line   47  Inlined Spatial load     at 408782 4087a1 4087c2 4087d9 
            Inlined Spatial store    at 408782 4087a1 4087c2 4087d9 
-           Inlined Temporal load    at 408782 4087c2 4087d9 
-           Inlined Temporal store   at 408782 4087c2 4087d9 
 
-Checked lines: 36
+           Checked lines: 3
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/localcharset.c
 Line  129  Inlined Spatial load     at 40be64 40be6d 
            Inlined Spatial store    at 40be64 40be6d 
-           Inlined Memcopy          at 40be64 
-           Inlined Temporal load    at 40be64 40be6d 
 Line  146  Inlined Spatial load     at 40c008 40c00d 
            Inlined Spatial store    at 40c008 40c00d 
-           Inlined Memcopy          at 40c068 
-           Inlined Temporal load    at 40c008 40c00d 40c068 
-           Inlined Temporal store   at 40c00d 40c068 
-Line  147  Inlined Memcopy          at 40c06c 
-           Inlined Temporal load    at 40c06c 
 Line  151  Inlined Spatial store    at 40c4b0 
-           Inlined Temporal load    at 40c4b0 
-           Inlined Temporal store   at 40c4b0 
 Line  152  Inlined Spatial store    at 40c4c5 
-           Inlined Memcopy          at 40c502 
-           Inlined Temporal load    at 40c4c5 40c502 
-           Inlined Temporal store   at 40c4c5 
 Line  153  Inlined Spatial load     at 40c723 
            Inlined Spatial store    at 40c723 
-           Inlined Memcopy          at 40c50a 
-           Inlined Temporal load    at 40c50a 40c723 
-Line  181  Inlined Temporal load    at 40c8b6 
-Line  204  Inlined Temporal load    at 40d35e 
-Line  210  Inlined Temporal load    at 40d6ca 
 Line  224  Inlined Spatial load     at 40d523 
            Inlined Spatial store    at 40d523 
-           Inlined Temporal load    at 40d523 
 Line  229  Inlined Spatial load     at 40d719 
            Inlined Spatial store    at 40d719 
-           Inlined Temporal load    at 40d719 
 Line  230  Inlined Spatial load     at 40d71d 
            Inlined Spatial store    at 40d71d 
-           Inlined Temporal load    at 40d71d 
 Line  239  Inlined Spatial load     at 40dc60 
            Inlined Spatial store    at 40dc60 
-           Inlined Temporal load    at 40dc60 
 Line  242  Inlined Spatial load     at 40e194 
            Inlined Spatial store    at 40e194 
-           Inlined Temporal load    at 40e194 
 Line  243  Inlined Spatial load     at 40de33 
            Inlined Spatial store    at 40de33 
-           Inlined Memcopy          at 40de33 
-           Inlined Temporal load    at 40de33 
-           Inlined Temporal store   at 40de33 
 Line  247  Inlined Spatial load     at 40de80 
            Inlined Spatial store    at 40de43 40de80 
-           Inlined Memcopy          at 40de43 
-           Inlined Temporal load    at 40de43 40de80 
-           Inlined Temporal store   at 40de43 
 Line  377  Inlined Spatial load     at 40ca5f 
            Inlined Spatial store    at 40ca5f 
-           Inlined Temporal load    at 40ca5f 
 Line  584  Inlined Spatial load     at 40be0e 
            Inlined Spatial store    at 40be0e 
-           Inlined Temporal load    at 40be0e 
 Line  589  Inlined Spatial load     at 40cd69 
 Line  591  Inlined Spatial load     at 40cceb 40ccfe 
-           Inlined Temporal load    at 40cceb 40ccfe 
 Line  592  Inlined Spatial load     at 40cc0e 40cc14 
            Inlined Spatial store    at 40cc0e 40cc14 
-           Inlined Temporal load    at 40cc0e 40cc14 
 Line  595  Inlined Spatial load     at 40ce13 40ce1b 
            Inlined Spatial store    at 40ce13 40ce1b 
-           Inlined Temporal load    at 40ce13 40ce1b 
 Line  602  Inlined Spatial load     at 40ce4e 
            Inlined Spatial store    at 40ce4e 
-           Inlined Temporal load    at 40ce4e 
 
-Checked lines: 59
+           Checked lines: 19
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/long-options.c
 Line   61  Inlined Spatial load     at 405f7f 
 Line   72  Inlined Spatial load     at 405fcc 
            Inlined Spatial store    at 405fcc 
-           Inlined Temporal load    at 405fcc 
-           Inlined Temporal store   at 405fcc 
 Line   73  Inlined Spatial load     at 405ffa 
            Inlined Spatial store    at 405ffa 
-           Inlined Temporal load    at 405ffa 
-           Inlined Temporal store   at 405ffa 
-Line   89  Inlined Temporal load    at 406861 
 
-Checked lines: 63
-/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/mbrtowc.c
-Line  353  Inlined Temporal load    at 4085b9 
-Line  388  Inlined Temporal load    at 40865c 
-Line  399  Inlined Temporal load    at 4088ec 
+           Checked lines: 3
 
-Checked lines: 66
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/progname.c
-Line   54  Inlined Temporal load    at 415ba4 
 Line   61  Inlined Spatial load     at 414fb3 
            Inlined Spatial store    at 414fb3 
-           Inlined Temporal load    at 414fb3 
 Line   66  Inlined Spatial load     at 4150e7 
-           Inlined Temporal load    at 4150e7 
 Line   70  Inlined Spatial load     at 4150eb 
            Inlined Spatial store    at 4150eb 
-           Inlined Temporal load    at 4150eb 
 Line   84  Inlined Spatial load     at 415186 
            Inlined Spatial store    at 415186 
-           Inlined Temporal load    at 415186 
 
-Checked lines: 71
+           Checked lines: 4
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/quotearg.c
 Line  147  Inlined Spatial load     at 405b10 
 Line  229  Inlined Spatial load     at 40d036 40d058 
            Inlined Spatial store    at 40d036 40d058 
-           Inlined Temporal load    at 40d036 40d058 
 Line  232  Inlined Spatial load     at 40d131 
            Inlined Spatial store    at 40d131 
-           Inlined Temporal load    at 40d131 
-Line  308  Inlined Temporal load    at 4077fc 
 Line  315  Inlined Spatial store    at 407d13 
-           Inlined Temporal load    at 407d13 
-           Inlined Temporal store   at 407d13 
 Line  316  Inlined Spatial load     at 407d1b 
            Inlined Spatial store    at 407d1b 
-           Inlined Temporal load    at 407d1b 
-           Inlined Temporal store   at 407d1b 
-Line  354  Inlined Temporal load    at 40789e 
 Line  357  Inlined Spatial load     at 4079b6 4079fd 
            Inlined Spatial store    at 4079b6 
-           Inlined Temporal load    at 4079b6 4079fd 
-           Inlined Temporal store   at 4079b6 
-Line  358  Inlined Temporal load    at 407b00 
 Line  359  Inlined Spatial load     at 407a50 407aa7 407ab0 
            Inlined Spatial store    at 407a50 407a5a 407ab0 
-           Inlined Temporal load    at 407a50 407aa7 407ab0 
-           Inlined Temporal store   at 407a50 407a5a 407ab0 
 Line  378  Inlined Spatial store    at 407c2b 
-           Inlined Temporal load    at 407c2b 
-           Inlined Temporal store   at 407c2b 
 Line  379  Inlined Spatial load     at 407c33 
            Inlined Spatial store    at 407c33 
-           Inlined Temporal load    at 407c33 
-           Inlined Temporal store   at 407c33 
 Line  392  Inlined Spatial load     at 407f3b 407f41 
            Inlined Spatial store    at 407f3b 407f41 408f5b 
-           Inlined Temporal load    at 407f3b 407f41 
-           Inlined Temporal store   at 407f3b 
-Line  400  Inlined Temporal load    at 407feb 
-Line  408  Inlined Temporal load    at 4080e0 
 Line  409  Inlined Spatial load     at 4081ad 
            Inlined Spatial store    at 4081ad 
-           Inlined Temporal load    at 4081ad 
-           Inlined Temporal store   at 4081ad 
 Line  416  Inlined Spatial load     at 4081c7 
            Inlined Spatial store    at 4081c7 
-           Inlined Temporal load    at 4081c7 
 Line  420  Inlined Spatial load     at 408bfe 
 Line  422  Inlined Spatial load     at 408c37 4090c4 4090ed 409e4b 409e57 
            Inlined Spatial store    at 408c37 408c40 408cc8 4090c4 4090ed 409dc4 409dcf 409e4b 409e57 409ee4 409eed 
-           Inlined Temporal load    at 408c37 408c40 4090c4 4090ed 409dc4 409dcf 409e4b 409e57 409ee4 409eed 
-           Inlined Temporal store   at 408c37 408c40 4090ed 409dc4 409dcf 409e4b 409e57 409ee4 409eed 
 Line  432  Inlined Spatial store    at 40914d 409163 4091ec 
-           Inlined Temporal load    at 40914d 409163 
-           Inlined Temporal store   at 40914d 409163 
 Line  433  Inlined Spatial store    at 40a027 40a035 
-           Inlined Temporal load    at 40a027 40a035 
-           Inlined Temporal store   at 40a027 40a035 
 Line  454  Inlined Spatial load     at 407706 408db5 408dc7 408de8 
            Inlined Spatial store    at 407706 408db5 408dc7 
 Line  456  Inlined Spatial load     at 408e27 
            Inlined Spatial store    at 408e27 
-           Inlined Temporal load    at 408e27 
-           Inlined Temporal store   at 408e27 
 Line  467  Inlined Spatial store    at 408e5a 408e70 
-           Inlined Temporal load    at 408e5a 408e70 
-           Inlined Temporal store   at 408e5a 408e70 
 Line  468  Inlined Spatial store    at 409fbb 409fc9 
-           Inlined Temporal load    at 409fbb 409fc9 
-           Inlined Temporal store   at 409fbb 409fc9 
 Line  469  Inlined Spatial store    at 40a086 40a090 
-           Inlined Temporal load    at 40a086 40a090 
-           Inlined Temporal store   at 40a086 40a090 
 Line  470  Inlined Spatial store    at 40a11a 40a124 
-           Inlined Temporal load    at 40a11a 40a124 
-           Inlined Temporal store   at 40a11a 40a124 
 Line  492  Inlined Spatial store    at 408ed9 
 Line  501  Inlined Spatial store    at 408f8f 
 Line  518  Inlined Spatial load     at 407712 408bb1 
            Inlined Spatial store    at 407712 
-           Inlined Temporal store   at 408bb1 
 Line  562  Inlined Spatial load     at 408d36 408d47 
            Inlined Spatial store    at 408d36 408d47 
-           Inlined Temporal load    at 408d36 408d47 
-           Inlined Temporal store   at 408d36 408d47 
 Line  563  Inlined Spatial load     at 408fdb 408fe0 
            Inlined Spatial store    at 408fdb 408fe0 
-           Inlined Temporal load    at 408fdb 408fe0 
-           Inlined Temporal store   at 408fdb 408fe0 
 Line  564  Inlined Spatial load     at 409034 40903d 
            Inlined Spatial store    at 409034 40903d 
-           Inlined Temporal load    at 409034 40903d 
-           Inlined Temporal store   at 409034 40903d 
 Line  606  Inlined Spatial load     at 40826e 
            Inlined Spatial store    at 40826e 
-           Inlined Temporal load    at 408268 40826e 
-           Inlined Temporal store   at 40826e 
 Line  609  Inlined Spatial load     at 408b01 408b7a 408ba7 
-           Inlined Temporal load    at 408b01 
-Line  618  Inlined Temporal load    at 408344 
 Line  636  Inlined Spatial load     at 409258 40926d 
            Inlined Spatial store    at 409258 40926d 409282 
-           Inlined Temporal load    at 40926d 409282 
-           Inlined Temporal store   at 409282 
 Line  646  Inlined Spatial load     at 40899b 4089b0 
            Inlined Spatial store    at 40899b 4089b0 4089c3 
-           Inlined Temporal load    at 4089b0 4089c3 
-           Inlined Temporal store   at 4089c3 
 Line  650  Inlined Spatial store    at 4089ff 
-Line  662  Inlined Temporal load    at 408a38 
 Line  667  Inlined Spatial load     at 408aa6 
-           Inlined Temporal load    at 408aa6 
-           Inlined Temporal store   at 408aa6 
 Line  682  Inlined Spatial store    at 409438 40943d 4094a5 4094b2 409507 40950c 409580 409585 
-           Inlined Temporal load    at 40943d 4094b2 40950c 409585 
-           Inlined Temporal store   at 409438 40943d 4094a5 4094b2 409507 40950c 409580 409585 
 Line  683  Inlined Spatial store    at 4095e4 4095e9 
-           Inlined Temporal load    at 4095e9 
-           Inlined Temporal store   at 4095e4 4095e9 
 Line  684  Inlined Spatial store    at 409654 409659 
-           Inlined Temporal load    at 409659 
-           Inlined Temporal store   at 409654 409659 
 Line  689  Inlined Spatial load     at 409401 
            Inlined Spatial store    at 4093a0 4093a9 409401 
-           Inlined Temporal load    at 4093a9 
-           Inlined Temporal store   at 4093a0 4093a9 
 Line  694  Inlined Spatial store    at 409797 40979c 4097f9 409806 
-           Inlined Temporal load    at 40979c 409806 
-           Inlined Temporal store   at 409797 40979c 4097f9 409806 
 Line  695  Inlined Spatial load     at 409750 409753 
            Inlined Spatial store    at 4096fb 409700 409750 409753 
-           Inlined Temporal load    at 409700 409753 409765 
-           Inlined Temporal store   at 4096fb 409700 409753 
 Line  704  Inlined Spatial load     at 4098c0 4098d2 
            Inlined Spatial store    at 4098c0 4098d2 409930 
-           Inlined Temporal load    at 4098c0 4098d2 
-           Inlined Temporal store   at 4098d2 
 Line  712  Inlined Spatial load     at 40997c 409981 409be9 409bf6 
            Inlined Spatial store    at 40997c 409981 409a04 409a15 409b89 409b8e 409be9 409bf6 
-           Inlined Temporal load    at 40997c 409a04 409b89 409bf6 
-           Inlined Temporal store   at 40997c 409981 409a04 409a15 409b89 409b8e 409be9 409bf6 
 Line  715  Inlined Spatial load     at 409c7d 409c82 
            Inlined Spatial store    at 409b00 409b09 409c7d 409c82 
-           Inlined Temporal load    at 409b00 409c82 
-           Inlined Temporal store   at 409b00 409b09 409c7d 409c82 
 Line  716  Inlined Spatial load     at 409d00 409d05 
            Inlined Spatial store    at 409d00 409d05 
-           Inlined Temporal load    at 409d05 
-           Inlined Temporal store   at 409d00 409d05 
 Line  722  Inlined Spatial load     at 40a1e3 40a26d 
            Inlined Spatial store    at 40a1e3 40a265 40a26d 
 Line  730  Inlined Spatial load     at 40a204 40a21d 
@@ -377,256 +217,135 @@ Line  733  Inlined Spatial load     at 40a226
 Line  738  Inlined Spatial load     at 40a238 
            Inlined Spatial store    at 40a238 
 Line  747  Inlined Spatial load     at 40a375 40a37e 
-           Inlined Temporal load    at 40a375 40a37e 
-           Inlined Temporal store   at 40a37e 
 Line  748  Inlined Spatial load     at 40a46a 
            Inlined Spatial store    at 40a46a 
 Line  749  Inlined Spatial load     at 40a3d3 40a3d8 40a41c 40a421 
            Inlined Spatial store    at 40a3d3 40a3d8 40a41c 40a421 
-           Inlined Temporal load    at 40a3d3 40a3d8 40a41c 40a421 
-           Inlined Temporal store   at 40a3d3 40a3d8 40a421 
 Line  751  Inlined Spatial store    at 40a4c8 
-           Inlined Temporal store   at 40a4c8 
 Line  752  Inlined Spatial store    at 40a4d0 40a504 
-           Inlined Temporal load    at 40a4d0 
-           Inlined Temporal store   at 40a4d0 
-Line  758  Inlined Temporal load    at 40a673 
 Line  764  Inlined Spatial load     at 40a720 
-Line  886  Inlined Memcopy          at 40af27 40afc1 
-           Inlined Memset           at 40af27 40afc1 
-           Inlined Temporal load    at 40af27 40afc1 
-Line  888  Inlined Memset           at 40b263 
-           Inlined Temporal load    at 40b263 
-Line  889  Inlined Memset           at 40b296 40b2be 
-           Inlined Temporal load    at 40b296 40b2be 
 Line  890  Inlined Spatial load     at 40b304 40b319 
-           Inlined Temporal load    at 40b304 40b319 
 Line  894  Inlined Spatial load     at 40b35f 
-           Inlined Memset           at 40b35f 
-           Inlined Temporal load    at 40b35f 
 Line  897  Inlined Spatial load     at 40b3bc 40b417 40b420 40b443 
-           Inlined Memset           at 40b3bc 40b420 
-           Inlined Temporal load    at 40b3bc 40b417 40b420 40b443 
 Line  898  Inlined Spatial load     at 40b429 40b4ac 
-           Inlined Memset           at 40b429 
-           Inlined Temporal load    at 40b429 40b4ac 
 Line  906  Inlined Spatial load     at 40b6a9 
-           Inlined Memset           at 40b6a9 
-           Inlined Temporal load    at 40b6a9 
 Line  907  Inlined Spatial load     at 40b6b4 
-           Inlined Memset           at 40b6b4 
-           Inlined Temporal load    at 40b6b4 
 Line  917  Inlined Spatial load     at 40bb00 
-           Inlined Memset           at 40bb00 
-           Inlined Temporal load    at 40bb00 
 
-Checked lines: 143
+           Checked lines: 61
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/readutmp.c
 Line   49  Inlined Spatial load     at 4041b5 
-           Inlined Memcopy          at 4041b5 
 Line   54  Inlined Spatial load     at 4042aa 4042c7 4042eb 
            Inlined Spatial store    at 4042aa 4042eb 
-           Inlined Memcopy          at 4042aa 4042c7 4042eb 
-           Inlined Temporal load    at 4042aa 4042c7 4042eb 
-           Inlined Temporal store   at 4042be 4042c7 4042eb 
 Line   55  Inlined Spatial load     at 404356 404383 4043ba 
            Inlined Spatial store    at 404356 404383 
-           Inlined Memcopy          at 404356 404383 4043ba 
-           Inlined Temporal load    at 404356 404383 
-           Inlined Temporal store   at 404356 404383 
 Line   57  Inlined Spatial load     at 4043b7 
            Inlined Spatial store    at 4043b7 
-           Inlined Memcopy          at 4043b7 
-           Inlined Temporal load    at 4043b7 
-           Inlined Temporal store   at 4043b7 
 Line   67  Inlined Spatial load     at 403900 403937 403940 
            Inlined Spatial store    at 403900 
-           Inlined Memcopy          at 403900 
-           Inlined Temporal load    at 403900 403937 403940 
 Line   70  Inlined Spatial load     at 4038fb 40398e 403996 
            Inlined Spatial store    at 4038fb 40398e 403996 
-           Inlined Memcopy          at 4038fb 40398e 403996 
-           Inlined Temporal load    at 4038fb 40398e 403996 4039ba 
 Line   73  Inlined Spatial load     at 4039bc 403a37 
-           Inlined Memcopy          at 4039bc 403a37 
-           Inlined Temporal load    at 4039bc 
 Line  100  Inlined Spatial load     at 4037ef 
-           Inlined Memcopy          at 4037ef 
 Line  104  Inlined Spatial load     at 403a9e 403eac 
            Inlined Spatial store    at 403a9e 
-           Inlined Memcopy          at 403a9e 403eac 
-           Inlined Temporal load    at 403a9e 
-           Inlined Temporal store   at 403eac 
 Line  110  Inlined Spatial load     at 403be9 
            Inlined Spatial store    at 403be9 
-           Inlined Memcopy          at 403be9 
-           Inlined Temporal load    at 403be9 
-Line  113  Inlined Temporal load    at 403eda 
-           Inlined Temporal store   at 403eda 
-Line  115  Inlined Temporal load    at 403ef5 
-           Inlined Temporal store   at 403ef5 
 Line  116  Inlined Spatial load     at 403f1c 
-           Inlined Memcopy          at 403f1c 
-           Inlined Temporal load    at 403f1c 
-           Inlined Temporal store   at 403f1c 
 
-Checked lines: 156
+           Checked lines: 11
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/version-etc.c
 Line   84  Inlined Spatial load     at 40e4b7 
-           Inlined Temporal load    at 40e4b7 
 Line   86  Inlined Spatial load     at 40e633 40e6b4 
-           Inlined Temporal load    at 40e633 40e6b4 
 Line  102  Inlined Spatial load     at 40efe8 40f082 40f161 
-           Inlined Temporal load    at 40efe8 40f082 40f161 
 Line  106  Inlined Spatial load     at 40f206 40f2a8 40f31e 
-           Inlined Temporal load    at 40f206 40f2a8 40f31e 
 Line  110  Inlined Spatial load     at 40f57e 40f620 40f6a9 
-           Inlined Temporal load    at 40f57e 40f620 
 Line  117  Inlined Spatial load     at 40fa4c 40faf1 40fb76 40fc50 40ffeb 
-           Inlined Temporal load    at 40fa4c 40fb76 40ffeb 
 Line  124  Inlined Spatial load     at 41008d 41012f 4101b8 410270 410363 41078b 
-           Inlined Temporal load    at 41008d 41012f 4101b8 410270 410363 41078b 
 Line  131  Inlined Spatial load     at 410835 4108d7 410960 410a18 410b0b 410c09 4131d0 
-           Inlined Temporal load    at 410835 4108d7 410960 410a18 410b0b 410c09 4131d0 
 Line  139  Inlined Spatial load     at 411105 4111a7 411230 4112e8 4113db 4114d9 4115d7 
-           Inlined Temporal load    at 411105 4111a7 411230 4112e8 4113db 4114d9 
 Line  147  Inlined Spatial load     at 411b6d 411c0c 411c8e 411d4e 411e2f 411f1b 412007 4120f3 
-           Inlined Temporal load    at 411b6d 411c0c 411c8e 411d4e 411e2f 411f1b 412007 
 Line  156  Inlined Spatial load     at 4126cc 41276e 4127f7 4128bf 4129a3 412aa1 412b9f 412c9a 412d80 
-           Inlined Temporal load    at 4126cc 
 Line  167  Inlined Spatial load     at 40e766 40e81b 40e8a2 40e91f 40e99c 40ea19 40ea96 40eb07 40eb75 40ee84 
-           Inlined Temporal load    at 40e766 40ee84 
 Line  173  Inlined Spatial load     at 40ef23 
-           Inlined Temporal load    at 40ef23 
 Line  203  Inlined Spatial load     at 4062bc 406308 406350 40636c 4063c4 406468 406508 4068ad 4068d6 
            Inlined Spatial store    at 40636c 406468 406508 
-           Inlined Temporal load    at 406350 40636c 4063c4 406468 
-           Inlined Temporal store   at 406350 4063c4 4063ee 4068d6 
 Line  208  Inlined Spatial load     at 406741 
            Inlined Spatial store    at 406741 
 
-Checked lines: 171
+           Checked lines: 15
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/xmalloc.c
 Line   63  Inlined Spatial load     at 413bfc 413c18 
 
-Checked lines: 172
+           Checked lines: 1
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/src/system.h
 Line  645  Inlined Spatial load     at 4024eb 402546 
-           Inlined Memcopy          at 4024eb 402546 
-           Inlined Temporal load    at 4024eb 402546 
 Line  648  Inlined Spatial load     at 402553 
-           Inlined Memcopy          at 402553 
-           Inlined Temporal load    at 402553 
 Line  665  Inlined Spatial load     at 402b7e 
-           Inlined Memcopy          at 402b7e 
 Line  667  Inlined Spatial load     at 402c64 402cfd 
-           Inlined Memcopy          at 402c64 402cfd 
-           Inlined Temporal load    at 402c64 
 
-Checked lines: 176
+           Checked lines: 4
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/src/users.c
 Line   44  Inlined Spatial load     at 40463e 4046f0 
            Inlined Spatial store    at 40463e 4046f0 
-           Inlined Memcopy          at 40463e 4046f0 
-           Inlined Temporal load    at 40463e 4046f0 
-           Inlined Temporal store   at 4046f0 
 Line   54  Inlined Spatial load     at 4040e7 40450a 
            Inlined Spatial store    at 40450a 
-           Inlined Memcopy          at 40450a 
-           Inlined Temporal load    at 4040e7 40450a 
-           Inlined Temporal store   at 4040e7 40450a 
 Line   56  Inlined Spatial load     at 404110 404136 404141 
-           Inlined Memcopy          at 404136 
-           Inlined Temporal load    at 404110 
 Line   62  Inlined Spatial load     at 40440c 404442 
            Inlined Spatial store    at 40440c 404442 
-           Inlined Memcopy          at 40440c 404442 
-           Inlined Temporal load    at 40440c 404442 
-           Inlined Temporal store   at 40440c 404442 
 Line   70  Inlined Spatial load     at 40506c 
-           Inlined Memcopy          at 40506c 
-           Inlined Temporal load    at 40506c 
 Line   72  Inlined Spatial load     at 4049d6 
            Inlined Spatial store    at 4049d6 
-           Inlined Temporal load    at 4049d6 
 Line   73  Inlined Spatial load     at 4049df 404d5b 404dbf 404ec9 
            Inlined Spatial store    at 4049df 404ec9 
-           Inlined Memcopy          at 404dbf 
-           Inlined Temporal load    at 4049df 404d5b 404ec9 
 Line   77  Inlined Spatial load     at 4052b6 4052d5 
            Inlined Spatial store    at 4052b6 
-           Inlined Temporal load    at 4052b6 
 Line   78  Inlined Spatial load     at 405142 405177 
            Inlined Spatial store    at 405142 405177 
-           Inlined Memcopy          at 405142 405177 
-           Inlined Temporal load    at 405142 405177 
 Line   94  Inlined Spatial load     at 403fee 
            Inlined Spatial store    at 403fee 
-           Inlined Memcopy          at 403fee 
-           Inlined Temporal load    at 403fee 
 Line   96  Inlined Spatial load     at 404b6a 
            Inlined Spatial store    at 404b6a 
-           Inlined Memcopy          at 404b6a 
-           Inlined Temporal load    at 404b6a 
 Line   97  Inlined Spatial load     at 404cb5 
            Inlined Spatial store    at 404cb5 
-           Inlined Memcopy          at 404cb5 
-           Inlined Temporal load    at 404cb5 
 Line  103  Inlined Spatial load     at 402df4 402fc6 
-           Inlined Memcopy          at 402df4 402fc6 
-           Inlined Temporal load    at 402df4 
 Line  106  Inlined Spatial load     at 401e98 401ef4 
-           Inlined Memcopy          at 401e98 401ef4 
-           Inlined Temporal load    at 401e98 
 Line  113  Inlined Spatial load     at 402184 4021d6 
-           Inlined Memcopy          at 4021d6 
-           Inlined Temporal load    at 402184 
 Line  114  Inlined Spatial load     at 402344 4023e1 
-           Inlined Memcopy          at 402344 4023e1 
-           Inlined Temporal load    at 402344 4023e1 
 Line  127  Inlined Spatial load     at 415431 
 Line  131  Inlined Spatial load     at 4154f5 
-           Inlined Temporal load    at 4154f5 
 Line  133  Inlined Spatial load     at 4157b9 
-           Inlined Temporal load    at 4157b9 
 Line  134  Inlined Spatial load     at 415a84 
-           Inlined Temporal load    at 415a84 
 Line  136  Inlined Spatial load     at 4157f6 
-           Inlined Temporal load    at 4157f6 
 Line  139  Inlined Spatial load     at 4158f2 
 Line  143  Inlined Spatial load     at 4157f8 
-           Inlined Temporal load    at 4157f8 
 Line  147  Inlined Spatial load     at 415b33 415b67 
-           Inlined Temporal load    at 415b33 415b67 415e2d 
-Line  148  Inlined Temporal load    at 415e3a 
 
-Checked lines: 201
+           Checked lines: 24
+
 /usr/include/x86_64-linux-gnu/bits/stdio.h
 Line   66  Inlined Spatial load     at 40d290 40d29a 40d5f9 40d5ff 
            Inlined Spatial store    at 40d290 40d29a 40d5f9 40d5ff 
-           Inlined Temporal load    at 40d290 40d29a 40d34d 40d5f9 40d5ff 
 Line  108  Inlined Spatial load     at 404ee8 404f1e 404f65 404f7b 40504c 405071 
            Inlined Spatial store    at 404ee8 404f7b 404f84 40504c 405071 
-           Inlined Memcopy          at 404f7b 
-           Inlined Temporal load    at 404ee8 404f7b 404f84 40504c 
-           Inlined Temporal store   at 404ee8 404f7b 404f84 
 Line  135  Inlined Spatial store    at 413e18 
-           Inlined Temporal load    at 413e18 
-           Inlined Temporal store   at 413e18 
 
-Checked lines: 204
+           Checked lines: 3
+
 /usr/include/x86_64-linux-gnu/bits/string3.h
 Line  105  Inlined Spatial store    at 40dcdf 
-           Inlined Temporal load    at 40dcdf 
 Line  121  Inlined Spatial load     at 404267 
            Inlined Spatial store    at 404267 
-           Inlined Memcopy          at 404267 
-           Inlined Temporal load    at 404267 
 
-Checked lines: 206
+           Checked lines: 2
+
 ???
 Line    0  Inlined Spatial load     at 401dfa 401e06 
-           Inlined Memcopy          at 401dfa 401e06 
-           Inlined Temporal load    at 401dfa 
 
-Checked lines: 207
+           Checked lines: 1
+
