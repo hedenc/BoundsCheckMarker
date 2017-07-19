@@ -29,12 +29,12 @@ void parser::read()
 void parser::handle_jump(vector<code_block> &blocks, uint64_t instr, uint64_t split_addr, code_block &from)
 {
     if (split_addr < instr) {
-        fprintf(stderr, "start\n");
+        //fprintf(stderr, "start\n");
         uint64_t loopcount = 0;
         for (auto it = blocks.rbegin(); it != blocks.rend(); 
             ++it) {
             ++loopcount;
-            fprintf(stderr, "loop\n");
+            //fprintf(stderr, "loop\n");
             if (it->startinsno() == split_addr) {
                 //fprintf(stderr, " == split_addr\n");
                 from.doublelink(*it, split_addr);
