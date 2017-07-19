@@ -21,6 +21,7 @@ void lexer::read()
     if (!head_set_){
         head_ = fgetc(input_);
         head_set_ = 1;
+        //fprintf(stderr, "    %c\n", head_);
     }
 }
 

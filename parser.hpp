@@ -72,6 +72,8 @@ class parser {
 
 #ifdef RELJMPADDRS
     int64_t jump_offset_;
+#else
+    uint64_t jump_addr_;
 #endif
 
     map<uint64_t, unordered_set<uint64_t> > split_block_addr_;
@@ -104,8 +106,10 @@ public:
     */
     parser(FILE *file):
         lex_(file), ctok_(eof), ctok_set_(false), calls_(0), 
-#ifdef __APPLE__
+#ifdef RELJMPADDRS
         jump_offset_(0), 
+#else
+        jump_addr_(0),
 #endif
         curr_line_("???", 0), after_ret_(false)
     {};

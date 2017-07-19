@@ -22,21 +22,30 @@ void parser::read()
 {
     if (!ctok_set_)
         ctok_ = lex_.next_tok();
+    //fprintf(stderr, "%s\n", lex_.strval().c_str());
     ctok_set_ = true;
 }
 
 void parser::handle_jump(vector<code_block> &blocks, uint64_t instr, uint64_t split_addr, code_block &from)
 {
     if (split_addr < instr) {
+        fprintf(stderr, "start\n");
+        uint64_t loopcount = 0;
         for (auto it = blocks.rbegin(); it != blocks.rend(); 
             ++it) {
+            ++loopcount;
+            fprintf(stderr, "loop\n");
             if (it->startinsno() == split_addr) {
+                //fprintf(stderr, " == split_addr\n");
                 from.doublelink(*it, split_addr);
                 break;
             } else if (it->startinsno() < split_addr) {
+                //fprintf(stderr, " < split_addr\n");
                 auto inserted_elem = blocks.emplace(it.base(), *it);
+                //fprintf(stderr, "managed emplace\n");
 
-                inserted_elem->handle_split(split_addr, from);
+                inserted_elem->handle_split(split_addr, from, loopcount == 1);
+                //fprintf(stderr, "managed handle_split\n");
                 break;
             }
         }
@@ -49,7 +58,9 @@ void parser::handle_jump(vector<code_block> &blocks, uint64_t instr, uint64_t sp
 
 void parser::parse_addr(ast &tree, vector<code_block> &blocks)
 {
+    //fprintf(stderr, "hexval ");
     uint64_t instr = lex_.hexval();
+    //fprintf(stderr, "%" PRIx64 "\n", instr);
 
     code_block new_block(instr, curr_line_);
 
@@ -62,6 +73,12 @@ void parser::parse_addr(ast &tree, vector<code_block> &blocks)
         if (jump_offset_) {
             handle_jump(blocks, instr, instr + jump_offset_, blocks.back());
             jump_offset_ = 0;
+            insert_new_block = true;
+        }
+#else
+        if (jump_addr_) {
+            handle_jump(blocks, instr, jump_addr_, blocks.back());
+            jump_addr_ = 0;
             insert_new_block = true;
         }
 #endif
@@ -110,7 +127,9 @@ void parser::parse_addr(ast &tree, vector<code_block> &blocks)
 #ifdef RELJMPADDRS
             jump_offset_ = lex_.intval();
 #else
-            handle_jump(blocks, instr, lex_.hexval(), blocks.back());
+            jump_addr_ = lex_.hexval();
+            //uint64_t hexval = lex_.hexval();
+            //handle_jump(blocks, instr, hexval, blocks.back());
 #endif
         }
         break;
@@ -120,7 +139,9 @@ void parser::parse_addr(ast &tree, vector<code_block> &blocks)
             eat();
             after_ret_ = true;
 #ifdef RELJMPADDRS
-            jump_offset_ = lex_.intval();
+            uint64_t intval = lex_.intval();
+
+            jump_offset_ = intval;
 #else
             handle_jump(blocks, instr, lex_.hexval(), blocks.back());
 #endif
@@ -149,8 +170,11 @@ void parser::parse_lineinfo()
 
 void parser::parse(ast &tree, vector<code_block> &blocks)
 {
+
     do {
         read();
+        //fprintf(stderr, "%s", lex_.strval().c_str());
+
         switch (ctok_) {
         case lineinfo:
             eat();

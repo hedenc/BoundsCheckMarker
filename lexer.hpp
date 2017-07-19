@@ -65,9 +65,12 @@ public:
     // Returns token data for tokens that use hexformated integer token data
     uint64_t hexval() const
     {
+        //fprintf(stderr, "calling hexval(%s)\n", val_.c_str());
         //fprintf(stderr, "%s\n", strval());
         size_t pos;
         return std::stoull(val_, &pos, 16);
+        //fprintf(stderr, "success\n");
+        //return ret;
     }
 
     // Advances the lexer and returns next token

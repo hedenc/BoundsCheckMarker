@@ -8,20 +8,25 @@ void code_block::doublelink(code_block &to, uint64_t split_addr)
     to.backlink(startinsno());
 }
 
-void code_block::handle_split(uint64_t split_addr, code_block &from)
+void code_block::handle_split(uint64_t split_addr, code_block &from, bool last_block)
 {
+    //fprintf(stderr, "handle_split(%lx, %lx)\n", split_addr, from.startinsno_);
     startinsno_ = split_addr;
     this[-1].fwdptrs_ = {startinsno_};
     backtrace_ = {this[-1].startinsno_, from.startinsno_};
     from.fwdptrs_.insert(split_addr);
 
-    auto search = this[1].backtrace_.find(this[-1].startinsno_);
+    //fprintf(stderr, "debug %p\n", (void *) dbg);
+    if (!last_block) {
+        auto search = this[1].backtrace_.find(this[-1].startinsno_);
 
-    if (search != this[1].backtrace_.end()) {
-        this[1].backtrace_.erase(search);
-        this[1].backtrace_.insert(
-            this[-1].startinsno_
-        );
+        if (search != this[1].backtrace_.end()) {
+            //fprintf(stderr, "if\n");
+            this[1].backtrace_.erase(search);
+            this[1].backtrace_.insert(
+                this[-1].startinsno_
+            );
+        }
     }
 }
 
@@ -40,7 +45,7 @@ code_block *find_block(vector<code_block> &blocks, uint64_t insno)
     return find_block(
         insno, blocks.begin().base(), blocks.size()
     );
-};
+}
 
 
 

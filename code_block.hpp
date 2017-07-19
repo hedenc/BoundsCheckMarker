@@ -72,7 +72,7 @@ public:
     }
 
     void doublelink(code_block &to, uint64_t split_addr);
-    void handle_split(uint64_t split_addr, code_block &from);
+    void handle_split(uint64_t split_addr, code_block &from, bool last_block);
 
 };
 
