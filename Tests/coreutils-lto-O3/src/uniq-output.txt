@@ -1,83 +1,58 @@
 Number of check calls: 0
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/./lib/c-strcaseeq.h
 Line   78  Inlined Spatial load     at 417334 
-           Inlined Spatial store    at 417334 
-Line   92  Inlined Spatial load     at 417315 
-           Inlined Spatial store    at 417315 
+Line   92  Inlined Spatial load     at 417315 417437 
 Line  106  Inlined Spatial load     at 4172f6 417424 
-           Inlined Spatial store    at 4172f6 417424 
 Line  120  Inlined Spatial load     at 4172d7 417409 
-           Inlined Spatial store    at 4172d7 417409 
 Line  134  Inlined Spatial load     at 4172b8 4173e8 
-           Inlined Spatial store    at 4172b8 4173e8 
 Line  148  Inlined Spatial load     at 417293 4173c7 
-           Inlined Spatial store    at 417293 4173c7 
 Line  162  Inlined Spatial load     at 41725d 
-           Inlined Spatial store    at 41725d 
 
            Checked lines: 7
 
-/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/./lib/xalloc.h
-Line  186  Inlined Spatial load     at 40f850 
-Line  206  Inlined Spatial load     at 410179 
-Line  207  Inlined Spatial load     at 40f893 
-Line  210  Inlined Spatial load     at 40f89f 
-
-           Checked lines: 4
-
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/./lib/xstrtol.c
-Line   72  Inlined Spatial load     at 41f4a8 
-Line   81  Inlined Spatial load     at 41f640 
-           Inlined Spatial store    at 41f854 41f85b 
-Line  100  Inlined Spatial load     at 41eb1e 
-Line  106  Inlined Spatial load     at 41eb97 41ec18 
-Line  114  Inlined Spatial load     at 41edd0 41ee12 
-Line  118  Inlined Spatial load     at 41eebb 41ef69 
-Line  123  Inlined Spatial load     at 41ee30 41ee39 
-Line  151  Inlined Spatial store    at 41f0cd 41f0d7 41f0f2 
-Line  163  Inlined Spatial load     at 41f1f3 41f205 
-Line  164  Inlined Spatial load     at 41f249 41f262 
+Line   72  Inlined Spatial load     at 41f4b1 
+Line   81  Inlined Spatial store    at 41f85b 41fbd8 
+Line  106  Inlined Spatial load     at 41eb97 41ec18 41ec42 
+Line  114  Inlined Spatial load     at 41ee12 
+Line  118  Inlined Spatial load     at 41ef69 
+Line  123  Inlined Spatial load     at 41ee17 41ee39 
+Line  151  Inlined Spatial store    at 41f0d7 41f0f2 
+Line  163  Inlined Spatial load     at 41f205 
+Line  164  Inlined Spatial load     at 41f25d 
 Line  242  Inlined Spatial load     at 41f648 
-Line  244  Inlined Spatial store    at 41f717 41f71a 
-Line  247  Inlined Spatial load     at 41f75a 
-Line  249  Inlined Spatial store    at 41f8b9 
+Line  244  Inlined Spatial store    at 41f71a 
 
-           Checked lines: 14
+           Checked lines: 11
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/argmatch.c
 Line   64  Inlined Spatial load     at 40def6 
-Line   95  Inlined Spatial load     at 40c6b7 40c930 40cd20 
-Line  102  Inlined Spatial load     at 40c88d 40cc80 40cc88 40cc9e 
-           Inlined Spatial store    at 40c88d 40cc80 40cc88 
-Line  108  Inlined Spatial load     at 40c6c8 
-Line  133  Inlined Spatial store    at 40ca4b 
+Line   95  Inlined Spatial load     at 40c930 40ccc8 
+           Inlined Spatial store    at 40c930 
+Line  102  Inlined Spatial load     at 40cc88 40cc9e 
+Line  108  Inlined Spatial load     at 40c6c8 40c6d4 
 Line  134  Inlined Spatial load     at 40cd70 
            Inlined Spatial store    at 40cd70 
 Line  154  Inlined Spatial load     at 40d433 
-Line  155  Inlined Spatial load     at 40dae3 
-Line  159  Inlined Spatial load     at 40d717 40d8bd 40d9d1 
+Line  159  Inlined Spatial load     at 40d9d1 
+Line  164  Inlined Spatial load     at 40d82b 
 Line  166  Inlined Spatial load     at 40daf6 
-Line  182  Inlined Spatial load     at 40ca35 
-Line  192  Inlined Spatial load     at 40dcd2 
 
-           Checked lines: 12
+           Checked lines: 9
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/close-stream.c
 Line   58  Inlined Spatial load     at 420765 
            Inlined Spatial store    at 420765 
-Line   60  Inlined Spatial store    at 4207cd 
-Line   70  Inlined Spatial store    at 420940 
-Line   78  Inlined Spatial load     at 420956 
-           Inlined Spatial store    at 420956 
+Line   70  Inlined Spatial store    at 42094d 
 
-           Checked lines: 4
+           Checked lines: 2
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/closeout.c
-Line  114  Inlined Spatial load     at 40e14a 
-Line  117  Inlined Spatial load     at 40e6c8 
+Line  109  Inlined Spatial load     at 40dfbb 40dfec 
+Line  112  Inlined Spatial load     at 40e0b3 
+Line  114  Inlined Spatial load     at 40e637 
 Line  119  Inlined Spatial load     at 40e667 
-Line  122  Inlined Spatial load     at 40e379 
-Line  124  Inlined Spatial load     at 40e3c4 
+Line  122  Inlined Spatial load     at 40e379 40e3aa 
 
            Checked lines: 5
 
@@ -85,436 +60,348 @@ Line  124  Inlined Spatial load     at 40e3c4
 Line   34  Inlined Spatial load     at 406647 
            Inlined Spatial store    at 406647 
 Line   41  Inlined Spatial load     at 4065c6 
+           Inlined Spatial store    at 4065c6 
 
            Checked lines: 2
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/fclose.c
-Line   71  Inlined Spatial store    at 4200b5 
-Line  110  Inlined Spatial load     at 420232 
-           Inlined Spatial store    at 420232 
+Line   64  Inlined Spatial store    at 41fc73 
+Line   70  Inlined Spatial store    at 41fcae 41fce2 
+Line   71  Inlined Spatial store    at 4200ad 4200b5 
+Line   72  Inlined Spatial store    at 420139 
+
+           Checked lines: 4
+
+/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/fflush.c
+Line   42  Inlined Spatial store    at 41fe62 
+Line  148  Inlined Spatial load     at 41fe3e 
+           Inlined Spatial store    at 41fdbb 41fe02 41fe36 41fe3e 
 
            Checked lines: 2
 
-/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/fflush.c
-Line  148  Inlined Spatial load     at 41fe36 41fe3e 
-           Inlined Spatial store    at 41fe36 41fe3e 
-
-           Checked lines: 1
-
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/fseeko.c
-Line   51  Inlined Spatial load     at 41fea8 41fece 41feeb 41fef4 41ff10 41ff28 41ff31 
-           Inlined Spatial store    at 41fea8 41fece 41feeb 41fef4 41ff10 41ff28 41ff31 
-Line  127  Inlined Spatial store    at 42031d 
-Line  128  Inlined Spatial store    at 42032f 42033b 
+Line   51  Inlined Spatial load     at 41fea8 41fece 41fedd 41fef4 41ff10 41ff1f 41ff31 41ff4d 
+           Inlined Spatial store    at 41fea8 41fece 41fedd 41fef4 41ff10 41ff1f 41ff31 41ff4d 
+Line  128  Inlined Spatial store    at 420321 42032f 420336 42033b 
+Line  161  Inlined Spatial store    at 41ffa1 
 
            Checked lines: 3
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/hard-locale.c
 Line   43  Inlined Spatial load     at 40f2c3 
 Line   47  Inlined Spatial load     at 40f2ee 
-Line   71  Inlined Spatial load     at 40f388 
 
-           Checked lines: 3
+           Checked lines: 2
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/linebuffer.c
-Line   39  Inlined Spatial load     at 4066d4 
+Line   39  Inlined Spatial load     at 4066d4 40676e 
            Inlined Spatial store    at 4066d4 
 Line   63  Inlined Spatial load     at 40f437 40f492 
-           Inlined Spatial store    at 40f437 
-Line   65  Inlined Spatial load     at 40f57d 
-Line   67  Inlined Spatial load     at 40f534 40f552 
-           Inlined Spatial store    at 40f534 40f552 
-Line   75  Inlined Spatial load     at 40fef8 
-           Inlined Spatial store    at 40fef8 
-Line   77  Inlined Spatial load     at 40ff16 40ff44 40ff54 40ff59 
-           Inlined Spatial store    at 40ff16 40ff44 
-Line   81  Inlined Spatial load     at 40f79d 
-           Inlined Spatial store    at 40f79d 
+           Inlined Spatial store    at 40f437 40f492 
+Line   67  Inlined Spatial load     at 40f552 
+           Inlined Spatial store    at 40f552 
+Line   77  Inlined Spatial load     at 40ff16 40ff29 40ff54 
+           Inlined Spatial store    at 40ff16 40ff29 40ff54 
 Line   83  Inlined Spatial load     at 40f7be 
            Inlined Spatial store    at 40f7be 
-Line   87  Inlined Spatial load     at 40fe00 
-           Inlined Spatial store    at 40fe00 
-Line   89  Inlined Spatial load     at 40fe12 40fe3f 
-           Inlined Spatial store    at 40fe12 40fe3f 
-Line   90  Inlined Spatial load     at 40f5ce 40fe5e 
-           Inlined Spatial store    at 40f5ce 40fe5e 
-Line   95  Inlined Spatial load     at 410087 
-           Inlined Spatial store    at 410087 
+Line   89  Inlined Spatial load     at 40fe12 40fe36 
+           Inlined Spatial store    at 40fe12 40fe36 
+Line   90  Inlined Spatial load     at 40f5ce 40fe70 
+           Inlined Spatial store    at 40fe70 
 
-           Checked lines: 12
+           Checked lines: 7
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/localcharset.c
 Line  129  Inlined Spatial load     at 4161b4 4161bd 
-           Inlined Spatial store    at 4161b4 4161bd 
-Line  146  Inlined Spatial load     at 416358 41635d 
-           Inlined Spatial store    at 416358 41635d 
-Line  151  Inlined Spatial store    at 416800 
-Line  152  Inlined Spatial store    at 416815 
-Line  153  Inlined Spatial load     at 416a73 
-           Inlined Spatial store    at 416a73 
-Line  224  Inlined Spatial load     at 417873 
-           Inlined Spatial store    at 417873 
-Line  229  Inlined Spatial load     at 417a69 
-           Inlined Spatial store    at 417a69 
+Line  146  Inlined Spatial load     at 41635d 
+Line  147  Inlined Spatial load     at 4163bc 
+Line  152  Inlined Spatial load     at 416815 
+           Inlined Spatial store    at 416815 
+Line  153  Inlined Spatial load     at 41685a 
+Line  173  Inlined Spatial load     at 416b34 
+Line  181  Inlined Spatial load     at 416c01 
+Line  204  Inlined Spatial load     at 4176ae 4176bf 
+Line  210  Inlined Spatial load     at 417a22 
+Line  225  Inlined Spatial load     at 41787d 
 Line  230  Inlined Spatial load     at 417a6d 
-           Inlined Spatial store    at 417a6d 
-Line  239  Inlined Spatial load     at 417fb0 
-           Inlined Spatial store    at 417fb0 
+Line  232  Inlined Spatial load     at 417ef1 
 Line  242  Inlined Spatial load     at 4184e4 
-           Inlined Spatial store    at 4184e4 
-Line  243  Inlined Spatial load     at 418183 
-           Inlined Spatial store    at 418183 
-Line  247  Inlined Spatial load     at 4181d0 
-           Inlined Spatial store    at 418193 4181d0 
+Line  247  Inlined Spatial load     at 418193 4181c0 
+           Inlined Spatial store    at 418193 
 Line  377  Inlined Spatial load     at 416daf 
-           Inlined Spatial store    at 416daf 
-Line  584  Inlined Spatial load     at 41615e 
-           Inlined Spatial store    at 41615e 
-Line  589  Inlined Spatial load     at 4170b9 
-Line  591  Inlined Spatial load     at 41703b 41704e 
-Line  592  Inlined Spatial load     at 416f5e 416f64 
-           Inlined Spatial store    at 416f5e 416f64 
-Line  595  Inlined Spatial load     at 417163 41716b 
-           Inlined Spatial store    at 417163 41716b 
+Line  591  Inlined Spatial load     at 41704e 
+Line  592  Inlined Spatial load     at 416f64 
+Line  595  Inlined Spatial load     at 41716b 
 Line  602  Inlined Spatial load     at 41719e 
-           Inlined Spatial store    at 41719e 
 
            Checked lines: 19
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/mbrtowc.c
-Line  396  Inlined Spatial load     at 420614 42061a 
-           Inlined Spatial store    at 420614 42061a 
-Line  405  Inlined Spatial load     at 42069c 
-           Inlined Spatial store    at 42069c 
+Line  396  Inlined Spatial load     at 42061a 
+           Inlined Spatial store    at 42061a 
 
-           Checked lines: 2
+           Checked lines: 1
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/memcasecmp.c
-Line   41  Inlined Spatial load     at 41038f 4103c4 
-Line   42  Inlined Spatial load     at 4103c1 4103e7 4103fc 
+Line   41  Inlined Spatial load     at 410315 41038f 4103a2 4103c4 
+Line   42  Inlined Spatial load     at 4103e7 
 Line   45  Inlined Spatial load     at 4103ff 
-Line   49  Inlined Spatial load     at 410411 
 
-           Checked lines: 4
+           Checked lines: 3
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/memcoll.c
+Line   49  Inlined Spatial load     at 41e457 
 Line   76  Inlined Spatial load     at 41e517 
 Line   81  Inlined Spatial load     at 41e1bf 
 Line   82  Inlined Spatial load     at 41e20d 
-Line   84  Inlined Spatial load     at 41e24c 
 Line   85  Inlined Spatial load     at 41e258 
-Line   90  Inlined Spatial load     at 41e498 
+Line   90  Inlined Spatial load     at 41e483 41e498 
 
            Checked lines: 6
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/posixver.c
-Line   45  Inlined Spatial load     at 405b5f 
-           Inlined Spatial store    at 405b5f 
+Line   45  Inlined Spatial load     at 405b6d 
 Line   49  Inlined Spatial load     at 405ca5 
 
            Checked lines: 2
 
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/progname.c
-Line   60  Inlined Spatial load     at 4043ea 
-           Inlined Spatial store    at 4043ea 
-Line   66  Inlined Spatial load     at 404632 
-           Inlined Spatial store    at 404632 
+Line   51  Inlined Spatial load     at 404337 
+Line   54  Inlined Spatial load     at 40a408 
+Line   61  Inlined Spatial load     at 404483 
+           Inlined Spatial store    at 404483 
 Line   70  Inlined Spatial load     at 404636 
-           Inlined Spatial store    at 404636 
 Line   84  Inlined Spatial load     at 4046c5 
            Inlined Spatial store    at 4046c5 
-
-           Checked lines: 4
-
-/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/quotearg.c
-Line  147  Inlined Spatial load     at 40e500 410eea 
-Line  187  Inlined Spatial load     at 408f96 410992 
-           Inlined Spatial store    at 408f96 40ce4c 4105a3 410992 
-Line  191  Inlined Spatial load     at 408ff2 40ce80 410b7e 
-           Inlined Spatial store    at 408ff2 40ce80 4105d4 410b7e 
-Line  229  Inlined Spatial load     at 417386 4173a8 
-           Inlined Spatial store    at 417386 4173a8 
-Line  232  Inlined Spatial load     at 417481 
-           Inlined Spatial store    at 417481 
-Line  308  Inlined Spatial load     at 411b5b 
-Line  315  Inlined Spatial store    at 411f76 
-Line  316  Inlined Spatial load     at 411f93 
-           Inlined Spatial store    at 411f93 
-Line  357  Inlined Spatial load     at 411d19 411d38 
-           Inlined Spatial store    at 411d38 
-Line  358  Inlined Spatial load     at 411e30 
-Line  359  Inlined Spatial load     at 411d90 411ddf 411de0 
-           Inlined Spatial store    at 411d90 411d95 411ddf 411de0 
-Line  378  Inlined Spatial store    at 411f56 
-Line  379  Inlined Spatial load     at 41208c 
-           Inlined Spatial store    at 41208c 
-Line  392  Inlined Spatial load     at 4121cb 4121d1 
-           Inlined Spatial store    at 4121cb 4121d1 
-Line  400  Inlined Spatial load     at 412253 
-Line  408  Inlined Spatial load     at 412340 
-Line  409  Inlined Spatial load     at 412427 
-           Inlined Spatial store    at 412427 
-Line  416  Inlined Spatial load     at 412448 
-           Inlined Spatial store    at 412448 
-Line  420  Inlined Spatial load     at 41318f 
-Line  422  Inlined Spatial load     at 4131bb 4131c4 413241 4139b2 413a06 413a0e 413b07 413b1a 413b7e 413c30 
-           Inlined Spatial store    at 4131bb 4131c4 4139a6 4139b2 413a06 413a0e 413b07 413b1a 413b7e 413c27 413c30 
-Line  432  Inlined Spatial load     at 413a86 413a8f 
-           Inlined Spatial store    at 413a86 413a8f 
-Line  433  Inlined Spatial load     at 413cc7 413cd8 
-           Inlined Spatial store    at 413cc7 413cd8 
-Line  446  Inlined Spatial load     at 4132f9 
-           Inlined Spatial store    at 4132f9 
-Line  454  Inlined Spatial load     at 411a8b 413304 413331 
-           Inlined Spatial store    at 411a8b 413304 413331 
-Line  467  Inlined Spatial load     at 413bc6 
-           Inlined Spatial store    at 413bb8 413bc6 
-Line  468  Inlined Spatial load     at 413d67 
-           Inlined Spatial store    at 413d59 413d67 
-Line  469  Inlined Spatial load     at 413df5 
-           Inlined Spatial store    at 413deb 413df5 
-Line  470  Inlined Spatial load     at 413e4c 
-           Inlined Spatial store    at 413e42 413e4c 
-Line  492  Inlined Spatial load     at 41337a 
-Line  501  Inlined Spatial load     at 4133e5 
-Line  518  Inlined Spatial load     at 411a94 41314d 4133bc 
-           Inlined Spatial store    at 411a94 41314d 
-Line  562  Inlined Spatial load     at 413290 4132a1 
-           Inlined Spatial store    at 413290 4132a1 
-Line  563  Inlined Spatial load     at 41341d 413422 
-           Inlined Spatial store    at 41341d 413422 
-Line  564  Inlined Spatial load     at 413476 41347f 41353e 
-           Inlined Spatial store    at 413476 41347f 
-Line  606  Inlined Spatial load     at 4124d9 4124df 
-           Inlined Spatial store    at 4124d9 4124df 
-Line  609  Inlined Spatial load     at 41255e 4128c5 412931 
-           Inlined Spatial store    at 41255e 4128c5 
-Line  614  Inlined Spatial load     at 412598 
-Line  618  Inlined Spatial load     at 4125aa 
-Line  636  Inlined Spatial load     at 412b03 412b20 
-           Inlined Spatial store    at 412b03 412b20 
-Line  650  Inlined Spatial load     at 412785 4127a0 4127b3 
-           Inlined Spatial store    at 412785 4127a0 4127b3 
-Line  662  Inlined Spatial load     at 412827 412a77 
-Line  682  Inlined Spatial load     at 412c97 412c9f 412d0b 412d5f 412d67 412dd0 412dd8 
-           Inlined Spatial store    at 412c97 412c9f 412d06 412d0b 412d5f 412d67 412dd0 412dd8 
-Line  683  Inlined Spatial load     at 412e3c 
-           Inlined Spatial store    at 412e37 412e3c 
-Line  684  Inlined Spatial load     at 412ea4 412eac 
-           Inlined Spatial store    at 412ea4 412eac 
-Line  685  Inlined Spatial load     at 412f1f 
-Line  689  Inlined Spatial load     at 412c11 412c1a 412c66 
-           Inlined Spatial store    at 412c11 412c1a 412c66 
-Line  694  Inlined Spatial load     at 412f5b 412fb6 412fbe 
-           Inlined Spatial store    at 412f53 412f5b 412fb6 412fbe 
-Line  695  Inlined Spatial load     at 413020 413025 413080 413083 
-           Inlined Spatial store    at 413020 413025 413080 413083 
-Line  704  Inlined Spatial load     at 413580 41358a 
-           Inlined Spatial store    at 413580 41358a 
-Line  712  Inlined Spatial load     at 413658 41365d 41374a 41375b 41389e 4138a3 
-           Inlined Spatial store    at 413658 41365d 41374a 41375b 413844 413849 41389e 4138a3 
-Line  715  Inlined Spatial load     at 413625 413915 41391a 
-           Inlined Spatial store    at 4137bd 4137ce 413915 41391a 
-Line  716  Inlined Spatial load     at 4136b3 4136b8 
-           Inlined Spatial store    at 4136b3 4136b8 
-Line  722  Inlined Spatial load     at 413eed 413f60 
-           Inlined Spatial store    at 413eed 413f60 
-Line  730  Inlined Spatial load     at 413f07 413f18 
-           Inlined Spatial store    at 413f07 
-Line  733  Inlined Spatial load     at 413f20 
-           Inlined Spatial store    at 413f20 
-Line  738  Inlined Spatial load     at 413f32 
-           Inlined Spatial store    at 413f32 
-Line  747  Inlined Spatial load     at 4140c7 4140d0 
-           Inlined Spatial store    at 4140c7 4140d0 
-Line  748  Inlined Spatial store    at 4141b5 
-Line  749  Inlined Spatial load     at 414125 41412a 414167 41416c 
-           Inlined Spatial store    at 414125 41412a 
-Line  751  Inlined Spatial load     at 4141ed 
-           Inlined Spatial store    at 4141ed 
-Line  752  Inlined Spatial load     at 4141f5 414224 
-           Inlined Spatial store    at 4141f5 414224 
-Line  758  Inlined Spatial load     at 41439a 
-Line  764  Inlined Spatial load     at 414447 414497 
-Line  874  Inlined Spatial load     at 414b04 
-Line  886  Inlined Spatial load     at 414bab 414bba 414cc4 
-Line  890  Inlined Spatial load     at 41540b 
-Line  894  Inlined Spatial load     at 415428 41547f 
-Line  895  Inlined Spatial load     at 415458 
-Line  897  Inlined Spatial load     at 4154f9 415543 41554c 41557a 
-Line  898  Inlined Spatial load     at 415555 4155f0 
-Line  906  Inlined Spatial load     at 4157f6 
-Line  907  Inlined Spatial load     at 415801 
-Line  917  Inlined Spatial load     at 415de0 415df5 
-Line  957  Inlined Spatial load     at 410844 
-           Inlined Spatial store    at 410844 
-Line  958  Inlined Spatial store    at 4108c1 
-Line 1003  Inlined Spatial load     at 410bbe 
-           Inlined Spatial store    at 410bbe 
-Line 1006  Inlined Spatial load     at 410eac 
-           Inlined Spatial store    at 410eac 
-
-           Checked lines: 77
-
-/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/version-etc.c
-Line   84  Inlined Spatial load     at 418807 
-Line   86  Inlined Spatial load     at 418983 418a04 
-Line  102  Inlined Spatial load     at 419338 4193d2 4194b1 
-Line  106  Inlined Spatial load     at 419556 4195f8 41966e 
-Line  110  Inlined Spatial load     at 4198ce 419970 4199f9 
-Line  117  Inlined Spatial load     at 419d9c 419e41 419ec6 419fa0 41a33b 
-Line  124  Inlined Spatial load     at 41a3dd 41a47f 41a508 41a5c0 41a6b3 41aadb 
-Line  131  Inlined Spatial load     at 41ab85 41ac27 41acb0 41ad68 41ae5b 41af59 41d520 
-Line  139  Inlined Spatial load     at 41b455 41b4f7 41b580 41b638 41b72b 41b829 41b927 
-Line  147  Inlined Spatial load     at 41bebd 41bf5c 41bfde 41c09e 41c17f 41c26b 41c357 41c443 
-Line  156  Inlined Spatial load     at 41ca1c 41cabe 41cb47 41cc0f 41ccf3 41cdf1 41ceef 41cfea 41d0d0 
-Line  167  Inlined Spatial load     at 418ab6 418b6b 418bf2 418c6f 418cec 418d69 418de6 418e57 418ec5 4191d4 
-Line  173  Inlined Spatial load     at 419273 
-
-           Checked lines: 13
-
-/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/xmalloc.c
-Line   58  Inlined Spatial load     at 414eeb 414ef8 414f11 
-Line   62  Inlined Spatial load     at 40fd07 
-Line   63  Inlined Spatial load     at 40ff72 
-           Inlined Spatial store    at 40ff72 
-
-           Checked lines: 3
-
-/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/xmemcoll.c
-Line   39  Inlined Spatial load     at 41e619 
-Line   40  Inlined Spatial load     at 41e702 
-Line   60  Inlined Spatial load     at 41e8db 
-
-           Checked lines: 3
-
-/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/src/system.h
-Line  162  Inlined Spatial load     at 40c09c 40c15b 40c1dc 40c222 40c26c 40c296 
-Line  587  Inlined Spatial load     at 402308 
-           Inlined Spatial store    at 402308 
-Line  645  Inlined Spatial load     at 40344c 4034ab 
-           Inlined Spatial store    at 40344c 4034ab 
-Line  648  Inlined Spatial load     at 4034b8 
-           Inlined Spatial store    at 4034b8 
-Line  665  Inlined Spatial load     at 403aeb 
-           Inlined Spatial store    at 403aeb 
-Line  667  Inlined Spatial load     at 403bd6 403c6f 
-           Inlined Spatial store    at 403bd6 403c6f 
+Line   90  Inlined Spatial load     at 40476c 
 
            Checked lines: 6
 
+/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/quotearg.c
+Line  147  Inlined Spatial load     at 40e500 410eea 
+Line  187  Inlined Spatial load     at 40ce4c 
+           Inlined Spatial store    at 408f96 40ce4c 4105a3 410992 
+Line  191  Inlined Spatial load     at 40ce80 
+           Inlined Spatial store    at 408ff2 40a22e 40ce80 40d06e 4105d4 41079a 410b7e 
+Line  229  Inlined Spatial load     at 4173a8 
+Line  308  Inlined Spatial load     at 411b50 
+           Inlined Spatial store    at 411b50 
+Line  316  Inlined Spatial load     at 411f80 
+           Inlined Spatial store    at 411f80 
+Line  357  Inlined Spatial load     at 411d38 
+           Inlined Spatial store    at 411d38 
+Line  359  Inlined Spatial load     at 411dda 411de0 
+           Inlined Spatial store    at 411d95 411dda 411de0 
+Line  379  Inlined Spatial load     at 411f5c 
+           Inlined Spatial store    at 411f5c 
+Line  392  Inlined Spatial load     at 4121d1 
+Line  416  Inlined Spatial load     at 412448 
+           Inlined Spatial store    at 412448 
+Line  420  Inlined Spatial load     at 413195 
+Line  422  Inlined Spatial load     at 4131c4 41324d 413a0e 413b1a 
+           Inlined Spatial store    at 4131c4 4139b2 413a0e 413b1a 413c30 
+Line  432  Inlined Spatial store    at 413a8f 
+Line  433  Inlined Spatial store    at 413cd8 
+Line  454  Inlined Spatial load     at 413304 413331 
+           Inlined Spatial store    at 413331 
+Line  467  Inlined Spatial store    at 413bc6 
+Line  468  Inlined Spatial store    at 413d67 
+Line  469  Inlined Spatial store    at 413df5 
+Line  470  Inlined Spatial store    at 413e4c 
+Line  492  Inlined Spatial load     at 413384 
+Line  505  Inlined Spatial load     at 4133f0 
+Line  518  Inlined Spatial load     at 411a94 41314d 4133c2 
+           Inlined Spatial store    at 411a94 
+Line  540  Inlined Spatial load     at 413541 
+Line  562  Inlined Spatial load     at 4132a1 
+           Inlined Spatial store    at 4132a1 
+Line  563  Inlined Spatial load     at 413422 
+           Inlined Spatial store    at 413422 
+Line  564  Inlined Spatial load     at 41347f 
+           Inlined Spatial store    at 41347f 
+Line  606  Inlined Spatial load     at 4124df 
+Line  609  Inlined Spatial load     at 4128c5 
+Line  636  Inlined Spatial load     at 412b0d 412b32 
+Line  650  Inlined Spatial load     at 412793 4127b3 
+           Inlined Spatial store    at 412793 4127b3 
+Line  682  Inlined Spatial load     at 412c9f 412d67 412dd8 
+           Inlined Spatial store    at 412c9f 412d0b 412d67 412dd8 
+Line  683  Inlined Spatial store    at 412e3c 412e7f 
+Line  684  Inlined Spatial load     at 412eac 
+           Inlined Spatial store    at 412eac 412ef7 
+Line  689  Inlined Spatial load     at 412c1a 
+           Inlined Spatial store    at 412c1a 412c70 
+Line  694  Inlined Spatial load     at 412fbe 
+           Inlined Spatial store    at 412f5b 412fbe 
+Line  695  Inlined Spatial load     at 413025 413083 41309d 
+           Inlined Spatial store    at 413025 
+Line  704  Inlined Spatial load     at 41358a 
+           Inlined Spatial store    at 41358a 
+Line  712  Inlined Spatial load     at 41365d 41375b 4138a3 
+           Inlined Spatial store    at 41365d 41375b 413849 4138a3 
+Line  715  Inlined Spatial load     at 413630 41391a 
+           Inlined Spatial store    at 4137ce 41391a 
+Line  716  Inlined Spatial load     at 4136b8 
+           Inlined Spatial store    at 4136b8 
+Line  730  Inlined Spatial load     at 413f07 413f18 
+Line  734  Inlined Spatial load     at 414632 
+Line  738  Inlined Spatial load     at 413f29 413f57 
+           Inlined Spatial store    at 413f29 
+Line  747  Inlined Spatial load     at 4140d0 
+           Inlined Spatial store    at 4140c7 
+Line  749  Inlined Spatial load     at 414167 41416c 
+           Inlined Spatial store    at 41412a 
+Line  752  Inlined Spatial load     at 4141f5 
+           Inlined Spatial store    at 4141f5 
+Line  764  Inlined Spatial load     at 41445c 
+Line  894  Inlined Spatial load     at 415428 
+Line  895  Inlined Spatial load     at 415458 
+Line  897  Inlined Spatial load     at 4154f9 415543 41554c 
+Line  898  Inlined Spatial load     at 415555 4155f0 
+Line  917  Inlined Spatial load     at 415df5 
+Line  949  Inlined Spatial load     at 40a2f9 
+Line  957  Inlined Spatial store    at 410844 
+Line  976  Inlined Spatial load     at 40e4bb 
+Line  978  Inlined Spatial load     at 40e599 
+Line 1003  Inlined Spatial load     at 410d81 
+           Inlined Spatial store    at 410bbe 410d78 
+
+           Checked lines: 58
+
+/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/version-etc.c
+Line   68  Inlined Spatial load     at 418754 
+Line   84  Inlined Spatial load     at 418807 4188da 
+Line   86  Inlined Spatial load     at 418983 418a04 
+Line   95  Inlined Spatial load     at 418a48 
+Line  102  Inlined Spatial load     at 419338 4194b1 
+Line  106  Inlined Spatial load     at 419556 4195f8 419847 
+Line  110  Inlined Spatial load     at 4198ce 419970 4199f9 
+Line  117  Inlined Spatial load     at 419d9c 419e41 419ec6 419fa0 
+Line  124  Inlined Spatial load     at 41a3dd 41a47f 41a508 41a5c0 41a6b3 
+Line  131  Inlined Spatial load     at 419242 41a36c 41ab14 41ab85 41ac27 41acb0 41ad68 41ae5b 41af59 41d52e 
+Line  139  Inlined Spatial load     at 41b455 41b4f7 41b580 41b638 41b72b 41b829 41b927 
+Line  147  Inlined Spatial load     at 41bebd 41bf5c 41bfde 41c09e 41c17f 41c26b 41c357 41c443 
+Line  156  Inlined Spatial load     at 41ca1c 41cabe 41cb47 41cc0f 41ccf3 41cdf1 41ceef 41cfea 41d0d0 
+Line  167  Inlined Spatial load     at 418ab6 418b6b 418bf2 418c6f 418cec 418d69 418de6 418e57 418ec5 
+
+           Checked lines: 14
+
+/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/xmalloc.c
+Line   63  Inlined Spatial load     at 40ff72 415ec6 
+           Inlined Spatial store    at 40ff72 
+
+           Checked lines: 1
+
+/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/lib/xmemcoll.c
+Line   40  Inlined Spatial load     at 41e702 
+
+           Checked lines: 1
+
+/home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/src/system.h
+Line  162  Inlined Spatial load     at 40c09c 40c15b 40c1dc 40c206 40c217 40c26c 40c29a 
+Line  587  Inlined Spatial load     at 4022ce 4023a5 
+Line  645  Inlined Spatial load     at 40349b 
+Line  648  Inlined Spatial load     at 4034af 4034b8 
+Line  651  Inlined Spatial load     at 40366a 403743 
+Line  655  Inlined Spatial load     at 4037a2 
+Line  656  Inlined Spatial load     at 4037e6 
+Line  662  Inlined Spatial load     at 4038e0 403982 
+Line  665  Inlined Spatial load     at 403a15 403aeb 
+Line  667  Inlined Spatial load     at 403b72 403c6f 
+
+           Checked lines: 10
+
 /home/hedenc/Documents/BoundsCheckMarker/Tests/coreutils-8.27/src/uniq.c
-Line  168  Inlined Spatial load     at 403d66 
-           Inlined Spatial store    at 403d66 
-Line  171  Inlined Spatial load     at 401fb8 402014 
-           Inlined Spatial store    at 401fb8 402014 
-Line  175  Inlined Spatial load     at 40214b 40219d 
-           Inlined Spatial store    at 40219d 
-Line  184  Inlined Spatial load     at 402473 
-           Inlined Spatial store    at 402473 
-Line  188  Inlined Spatial load     at 4025de 
-           Inlined Spatial store    at 4025de 
-Line  194  Inlined Spatial load     at 402749 
-           Inlined Spatial store    at 402749 
-Line  197  Inlined Spatial load     at 4028b4 
-           Inlined Spatial store    at 4028b4 
-Line  201  Inlined Spatial load     at 402a1f 
-           Inlined Spatial store    at 402a1f 
-Line  206  Inlined Spatial load     at 402b8a 
-           Inlined Spatial store    at 402b8a 
-Line  209  Inlined Spatial load     at 402cf5 
-           Inlined Spatial store    at 402cf5 
-Line  212  Inlined Spatial load     at 402e60 
-           Inlined Spatial store    at 402e60 
-Line  213  Inlined Spatial load     at 402fcb 
-           Inlined Spatial store    at 402fcb 
-Line  214  Inlined Spatial load     at 403136 
-           Inlined Spatial store    at 403136 
-Line  219  Inlined Spatial load     at 4032a6 403343 
-           Inlined Spatial store    at 4032a6 403343 
-Line  246  Inlined Spatial load     at 4054a6 
+Line  168  Inlined Spatial load     at 403d66 403f38 
+Line  171  Inlined Spatial load     at 401fb8 4020b7 
+Line  175  Inlined Spatial load     at 40214b 40223a 
+Line  184  Inlined Spatial load     at 402439 402510 
+Line  188  Inlined Spatial load     at 4025a4 40267b 
+Line  194  Inlined Spatial load     at 40270f 4027e6 
+Line  197  Inlined Spatial load     at 40287a 402951 
+Line  201  Inlined Spatial load     at 4029e5 402abc 
+Line  206  Inlined Spatial load     at 402b50 402c27 
+Line  209  Inlined Spatial load     at 402cbb 402d92 
+Line  212  Inlined Spatial load     at 402e26 402efd 
+Line  213  Inlined Spatial load     at 402f91 403068 
+Line  214  Inlined Spatial load     at 4030fc 4031d3 
+Line  219  Inlined Spatial load     at 40326c 403343 
+Line  246  Inlined Spatial load     at 40501c 4054a6 4058fe 
 Line  253  Inlined Spatial load     at 409865 4098a0 
-Line  270  Inlined Spatial load     at 40bffa 
-Line  272  Inlined Spatial load     at 40c020 40c029 40c212 
-Line  274  Inlined Spatial load     at 40c0e5 
-Line  280  Inlined Spatial load     at 40c2f7 
-Line  299  Inlined Spatial load     at 4070ce 407190 
-Line  304  Inlined Spatial load     at 4071bf 
-Line  317  Inlined Spatial load     at 407626 407874 
-Line  323  Inlined Spatial load     at 40765f 40789b 
-Line  325  Inlined Spatial load     at 4076fe 407731 40773e 407770 407925 407965 407972 407993 
-           Inlined Spatial store    at 407993 
-Line  337  Inlined Spatial load     at 40619e 4061ca 4062f0 406329 406360 
-           Inlined Spatial store    at 406329 
-Line  338  Inlined Spatial load     at 409ceb 
-Line  339  Inlined Spatial load     at 40639d 4063bb 4064cf 406503 
-           Inlined Spatial store    at 40639d 
+Line  272  Inlined Spatial load     at 40c029 40c20d 
+Line  274  Inlined Spatial load     at 40c0e5 40c2a8 
+Line  299  Inlined Spatial load     at 4070df 407ea4 40863e 
+Line  302  Inlined Spatial load     at 407311 4080ae 408842 
+Line  304  Inlined Spatial load     at 4071c8 407f6d 408705 
+Line  323  Inlined Spatial load     at 4076bc 4078ef 
+Line  325  Inlined Spatial load     at 4076fe 407731 40773e 407747 407925 407965 407972 40797b 
+Line  337  Inlined Spatial load     at 40619e 4061d3 4062f0 406329 406360 
+Line  338  Inlined Spatial load     at 409ceb 409d2c 
+Line  339  Inlined Spatial load     at 40639d 4063c4 4064cf 406503 406514 
 Line  340  Inlined Spatial load     at 409e71 409ead 
-Line  342  Inlined Spatial load     at 406534 
-Line  371  Inlined Spatial load     at 4067f8 407bcc 407bf4 40835e 408393 
+Line  371  Inlined Spatial load     at 407bcc 407bf4 407c3c 40835e 408393 
 Line  377  Inlined Spatial load     at 407cae 407cee 408448 408492 
-Line  383  Inlined Spatial load     at 407b14 
-Line  386  Inlined Spatial load     at 408134 4088c7 
-Line  392  Inlined Spatial load     at 408ab4 408ac9 
-           Inlined Spatial store    at 408ab4 408ac9 
-Line  394  Inlined Spatial load     at 407ada 
-Line  403  Inlined Spatial load     at 408ba3 408bac 
-Line  413  Inlined Spatial load     at 406886 406969 406972 
-           Inlined Spatial store    at 406969 406972 
+Line  383  Inlined Spatial load     at 407b14 407b65 
+Line  386  Inlined Spatial load     at 408140 4088d0 
+Line  392  Inlined Spatial load     at 408ac9 
+           Inlined Spatial store    at 408ac9 
+Line  403  Inlined Spatial load     at 408bac 
+Line  413  Inlined Spatial load     at 40692a 406972 
 Line  418  Inlined Spatial load     at 406e30 406e64 
-           Inlined Spatial store    at 406e64 
+           Inlined Spatial store    at 406e30 406e64 
 Line  423  Inlined Spatial load     at 406f1a 406f65 
            Inlined Spatial store    at 406f65 
 Line  425  Inlined Spatial load     at 4077bc 
-Line  450  Inlined Spatial load     at 4073ad 
-Line  463  Inlined Spatial load     at 406d25 
-Line  472  Inlined Spatial load     at 408d74 408ded 408e60 
-           Inlined Spatial store    at 408e60 
-Line  473  Inlined Spatial load     at 40a3a1 
+Line  450  Inlined Spatial load     at 406d55 4073b8 
+Line  472  Inlined Spatial load     at 408d74 408e2c 
+           Inlined Spatial store    at 408d74 
+Line  473  Inlined Spatial load     at 408ec8 40a3a1 
            Inlined Spatial store    at 408ec8 
 Line  477  Inlined Spatial load     at 409154 40916d 
 Line  478  Inlined Spatial load     at 40929a 4092b3 
 Line  499  Inlined Spatial load     at 4040c6 4040e2 4041a1 
-           Inlined Spatial store    at 4040c6 4040e2 4041a1 
-Line  525  Inlined Spatial load     at 404c62 404cd4 
-Line  529  Inlined Spatial load     at 404cff 
+           Inlined Spatial store    at 4040c6 4040e2 
+Line  502  Inlined Spatial load     at 40486f 
+Line  503  Inlined Spatial load     at 4048fa 
+Line  504  Inlined Spatial load     at 40496e 
+Line  505  Inlined Spatial load     at 40499d 
+Line  525  Inlined Spatial load     at 404c62 404ca0 404ce0 
 Line  531  Inlined Spatial load     at 404d0c 
-Line  533  Inlined Spatial load     at 40965e 409692 
-           Inlined Spatial store    at 40965e 409692 
+Line  533  Inlined Spatial load     at 40965e 409692 40a5ab 
 Line  534  Inlined Spatial load     at 40a5f1 
-Line  536  Inlined Spatial load     at 404d16 404da6 
-           Inlined Spatial store    at 404d5d 404da6 
-Line  543  Inlined Spatial load     at 405995 4059c1 405a12 405a1e 
-           Inlined Spatial store    at 405f16 
-Line  550  Inlined Spatial store    at 40999f 
-Line  554  Inlined Spatial load     at 405f59 405fb0 
-           Inlined Spatial store    at 405f35 405f59 
-Line  570  Inlined Spatial load     at 404e87 404eba 404ec3 
-Line  572  Inlined Spatial load     at 4050ca 4050da 
-Line  592  Inlined Spatial load     at 4055b5 
-Line  593  Inlined Spatial load     at 4057ac 
-Line  595  Inlined Spatial load     at 405713 
-           Inlined Spatial store    at 405713 
-Line  603  Inlined Spatial load     at 40515b 
-Line  605  Inlined Spatial load     at 4052c5 405354 
-Line  612  Inlined Spatial load     at 40551a 40552b 
-Line  631  Inlined Spatial load     at 405962 405971 405992 
-Line  641  Inlined Spatial load     at 406019 
-           Inlined Spatial store    at 406019 
+Line  536  Inlined Spatial load     at 404d16 404da6 404de2 
+           Inlined Spatial store    at 404da6 
+Line  543  Inlined Spatial load     at 405995 4059c1 405a1e 
+           Inlined Spatial store    at 405a1e 
+Line  545  Inlined Spatial load     at 405e88 
+Line  550  Inlined Spatial load     at 40996b 
+Line  554  Inlined Spatial load     at 405f59 
+           Inlined Spatial store    at 405f35 
+Line  570  Inlined Spatial load     at 404ecf 
+Line  572  Inlined Spatial load     at 4050e5 
+Line  592  Inlined Spatial load     at 4055be 
+Line  593  Inlined Spatial load     at 4057c7 
+Line  595  Inlined Spatial load     at 405713 405744 
+Line  603  Inlined Spatial load     at 40516f 
+Line  605  Inlined Spatial load     at 4052c5 4052f6 40536f 
+Line  612  Inlined Spatial load     at 405534 
+Line  631  Inlined Spatial load     at 40597a 
+Line  641  Inlined Spatial load     at 406019 406b21 
 Line  644  Inlined Spatial load     at 406af8 
-Line  654  Inlined Spatial load     at 409bfe 
-Line  665  Inlined Spatial load     at 4060d2 
+Line  652  Inlined Spatial store    at 40609d 
+Line  654  Inlined Spatial load     at 409bc4 
+Line  655  Inlined Spatial load     at 409c0b 
 Line  672  Inlined Spatial load     at 406120 
 
            Checked lines: 71
 
 /usr/include/x86_64-linux-gnu/bits/stdio.h
-Line   66  Inlined Spatial load     at 40f5c6 40f65b 40f6ae 40f6bc 4175e0 4175ea 417949 41794f 
-           Inlined Spatial store    at 4175e0 4175ea 417949 41794f 
-Line  101  Inlined Spatial load     at 40db61 40db87 40dbcb 40dd11 
-           Inlined Spatial store    at 40dbe1 40dbea 40dd11 
-Line  108  Inlined Spatial load     at 406e26 4073fb 40741a 407448 4074ae 4074c4 4074cd 407b9d 4081a0 4081bf 408239 40824f 408258 40833d 40891c 40893b 40896c 4089cf 4089e5 4089ee 408bc0 408c39 408c5f 408ca5 408cbb 408cc4 408d71 
-           Inlined Spatial store    at 4073fb 40741a 4074c4 4074cd 4081a0 4081bf 40824f 408258 40891c 40893b 4089e5 4089ee 408bc0 408cbb 408cc4 408d71 409493 
+Line   66  Inlined Spatial load     at 40f58b 40f5ac 40f65b 40f6bc 416c0b 4175ea 41794f 
+           Inlined Spatial store    at 40f6bc 
+Line  101  Inlined Spatial load     at 40db61 40dbcb 40dbe1 40dbea 
+           Inlined Spatial store    at 40dbea 
+Line  108  Inlined Spatial load     at 40741a 4074ae 4074cd 4081bf 408239 408258 40893b 4089cf 4089ee 408bc0 408c39 408ca5 408cc4 
+           Inlined Spatial store    at 40741a 4074cd 408258 4089ee 408c39 408cc4 
 Line  135  Inlined Spatial store    at 4207f8 
 
            Checked lines: 4
@@ -525,8 +412,7 @@ Line  105  Inlined Spatial store    at 41802f
            Checked lines: 1
 
 ???
-Line    0  Inlined Spatial load     at 401f1a 401f26 
-           Inlined Spatial store    at 401f1a 401f26 
+Line    0  Inlined Spatial load     at 401f26 
 
            Checked lines: 1
 
